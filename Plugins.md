@@ -1,0 +1,15 @@
+See [[Authoring plugins]] for instructions on how to write new commands for
+pyenv or hook into its functionality.
+
+A plugin can be installed by dropping it in as a sub-directory of
+`$PYENV_ROOT/plugins`, or it can be located elsewhere on the system as long as
+`pyenv-*` executables are placed in the `$PATH` and hooks are installed
+accordingly somewhere in `$PYENV_HOOK_PATH`.
+
+## Approved plugins
+
+This list is edited by pyenv maintainers.
+
+* [virtualenv](https://github.com/yyuu/pyenv-virtualenv) - the standard way to manage virtualenv with pyenv (formerly as known as [python-virtualenv](https://github.com/yyuu/python-virtualenv))
+* [virtualenvwrapper](https://github.com/yyuu/pyenv-virtualenvwrapper) - allow you to play pyenv with virtualenvwrapper
+* [pip-rehash](https://github.com/yyuu/pyenv-pip-rehash) - Automatically run `pyenv rehash` every time you install a new package via pip
