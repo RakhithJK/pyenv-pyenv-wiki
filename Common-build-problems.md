@@ -36,7 +36,7 @@ pyenv install 2.7.5
 
 you need to install sqlite-devel and rebuild Python.
 
-* Ubuntu: `sudo apt-get install libsqlite3-dev
+* Ubuntu: `sudo apt-get install libsqlite3-dev`
 
 * Fedora: `yum install sqlite sqlite-devel`
 
