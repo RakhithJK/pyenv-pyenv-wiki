@@ -1,6 +1,6 @@
 pyenv is a tool for simple Python version management.
 
-To install pyenv, please refer to the [Readme][installation].
+To install pyenv, please refer to the [Readme][install].
 
 ## Troubleshooting / FAQ
 
