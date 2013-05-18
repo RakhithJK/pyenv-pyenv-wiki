@@ -1,4 +1,5 @@
 * [[FAQ|Home]]
+* [[Common build problems]]
 * [[pyenv plugins|Plugins]]
 * [[Deploying with pyenv]]
 * [[Understanding binstubs]]
