@@ -13,3 +13,4 @@ This list is edited by pyenv maintainers.
 * [virtualenv](https://github.com/yyuu/pyenv-virtualenv) - the standard way to manage virtualenv with pyenv (formerly as known as [python-virtualenv](https://github.com/yyuu/python-virtualenv))
 * [virtualenvwrapper](https://github.com/yyuu/pyenv-virtualenvwrapper) - allow you to play pyenv with virtualenvwrapper
 * [pip-rehash](https://github.com/yyuu/pyenv-pip-rehash) - Automatically run `pyenv rehash` every time you install a new package via pip
+* [pip-migrate](https://github.com/yyuu/pyenv-pip-migrate) - Migrate pip packages from a Python version to another
