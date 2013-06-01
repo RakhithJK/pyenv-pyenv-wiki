@@ -15,3 +15,4 @@ This list is edited by pyenv maintainers.
 * [pip-rehash](https://github.com/yyuu/pyenv-pip-rehash) - Automatically run `pyenv rehash` every time you install a new package via pip
 * [pip-migrate](https://github.com/yyuu/pyenv-pip-migrate) - Migrate pip packages from a Python version to another
 * [update](https://github.com/yyuu/pyenv-update) - Update pyenv and plugins
+* [installer](https://github.com/yyuu/pyenv-installer) - This tools is used to install `pyenv` and friends
