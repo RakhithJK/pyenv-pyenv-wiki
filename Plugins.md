@@ -16,4 +16,4 @@ This list is edited by pyenv maintainers.
 * [pip-migrate](https://github.com/yyuu/pyenv-pip-migrate) - Migrate pip packages from a Python version to another
 * [update](https://github.com/yyuu/pyenv-update) - Update pyenv and plugins
 * [installer](https://github.com/yyuu/pyenv-installer) - This tools is used to install `pyenv` and friends
-* [doctor](https://github.com/yyuu/pyenv-doctor) - Verify pyenv installation and deevlopment tools to build pythons.
+* [doctor](https://github.com/yyuu/pyenv-doctor) - Verify pyenv installation
