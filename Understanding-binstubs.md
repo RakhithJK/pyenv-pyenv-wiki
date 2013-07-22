@@ -51,9 +51,9 @@ pyenv adds its own "shims" directory to `$PATH` which contains binstubs for
 every executable related to Python. There are binstubs for `python`, `pip`, and for
 all setuptools binstubs across each installed Python version.
 
-When you call `rspec` on the command-line, it results in this call chain:
+When you call `nosetests` on the command-line, it results in this call chain:
 
-1. `$PYENV_ROOT/shims/rspec` (pyenv shim)
+1. `$PYENV_ROOT/shims/nosetests` (pyenv shim)
 1. `$PYENV_ROOT/versions/2.7.5/bin/nosetests` (setuptools binstub)
 1. `$PYENV_ROOT/versions/2.7.5/lib/python2.7/site-packages/nose/__init__.py` (original)
 
