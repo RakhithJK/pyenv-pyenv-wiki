@@ -1,10 +1,13 @@
 ## Requirements:
 
-* Ubuntu: `sudo apt-get install make libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev` 
+* Ubuntu: 
+    `sudo apt-get install make libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev` 
 
-* Fedora: `yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel`
+* Fedora: 
+    `yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel`
 
-* Mac: ```bash brew install readline; brew link readline; pyenv install 2.7.5```
+* Mac: 
+    ```bash brew install readline; brew link readline; pyenv install 2.7.5```
 
 
 **NOTE**: `libssl-dev` is required when compiling Python, installing `libssl-dev` will actually install `zlib1g-dev`, which leads to uninstall and re-install Python versions (installed before installing `libssl-dev`).
