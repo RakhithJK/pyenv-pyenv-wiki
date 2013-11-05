@@ -1,44 +1,13 @@
-## zlib
+## Requirements:
 
-you need to install zlib-devel and rebuild Python.
+* Ubuntu: `sudo apt-get install make libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev` 
 
-* Ubuntu: `sudo apt-get install libssl-dev zlib1g-dev`
+* Fedora: `yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel`
 
-**NOTE**: `libssl-dev` is required when compiling Python, installing `libssl-dev` will actually install `zlib1g-dev`, which leads to uninstall and re-install Python versions (installed before installing `libssl-dev`). 
-
-* Fedora: `yum install zlib-devel`
+* Mac: ```bash brew install readline; brew link readline; pyenv install 2.7.5```
 
 
-## bzip2
-
-you need to install bzip2-devel and rebuild Python.
-
-* Ubuntu: `sudo apt-get install libbz2-dev`
-
-* Fedora: `yum install bzip2 bzip2-devel`
-
-
-## Readline support
-
-Install `libreadline-dev` first before running `python-build`
-
-* Ubuntu: `sudo apt-get install libreadline-dev`
-* Fedora: `yum install readline-devel`
-* Mac:
-```bash
-brew install readline
-brew link readline
-pyenv install 2.7.5
-```
-
-
-## SQLite
-
-you need to install sqlite-devel and rebuild Python.
-
-* Ubuntu: `sudo apt-get install libsqlite3-dev`
-
-* Fedora: `yum install sqlite sqlite-devel`
+**NOTE**: `libssl-dev` is required when compiling Python, installing `libssl-dev` will actually install `zlib1g-dev`, which leads to uninstall and re-install Python versions (installed before installing `libssl-dev`).
 
 
 ## Removing a python version
