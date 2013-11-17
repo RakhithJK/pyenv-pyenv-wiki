@@ -3,7 +3,7 @@ Binstubs are wrapper scripts around executables (sometimes referred to as
 the environment before dispatching the call to the original executable.
 
 In the Python world, the most common binstubs are the ones that setuptools generates
-after installing a gem that contains executables. But binstubs can be written in
+after installing a package that contains executables. But binstubs can be written in
 any language, and it often makes sense to create them manually.
 
 
