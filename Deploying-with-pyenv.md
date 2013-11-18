@@ -3,7 +3,7 @@ Some considerations for a hypothetical deployment strategy:
 
 * It is suggested that there is a single user for deployment, e.g. "app" user
 * `PYENV_ROOT` is at the default location: `~app/.pyenv`
-* Ruby versions are either installed or symlinked to `~app/.pyenv/versions`
+* Python versions are either installed or symlinked to `~app/.pyenv/versions`
 * pyenv version 0.2 or greater is recommended.
 
 Users of Capistrano may find these projects useful:
