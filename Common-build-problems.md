@@ -13,7 +13,7 @@ libreadline-dev libsqlite3-dev
     ```bash brew install readline; brew link readline; pyenv install 2.7.5```
 
 
-**NOTE**: `libssl-dev` is required when compiling Python, installing `libssl-dev` will actually install `zlib1g-dev`, which leads to uninstall and re-install Python versions (installed before installing `libssl-dev`).
+**NOTE**: `libssl-dev` is required when compiling Python, installing `libssl-dev` will actually install `zlib1g-dev`, which leads to uninstall and re-install Python versions (installed before installing `libssl-dev`). On Redhat and derivatives the package is named `openssl-devel`.
 
 
 ## Removing a python version
