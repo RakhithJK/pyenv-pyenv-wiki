@@ -18,3 +18,4 @@ This list is edited by pyenv maintainers.
 * [installer](https://github.com/yyuu/pyenv-installer) - This tools is used to install `pyenv` and friends
 * [doctor](https://github.com/yyuu/pyenv-doctor) - Verify pyenv installation
 * [implicit](https://github.com/concordusapps/pyenv-implict) - Allow pyenv to guess the python version from the program name.
+* [register](https://github.com/doloopwhile/pyenv-register) - Register system installed pythons to pyenv environment
