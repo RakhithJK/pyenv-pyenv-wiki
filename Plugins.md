@@ -19,3 +19,4 @@ This list is edited by pyenv maintainers.
 * [doctor](https://github.com/yyuu/pyenv-doctor) - Verify pyenv installation
 * [implicit](https://github.com/concordusapps/pyenv-implict) - Allow pyenv to guess the python version from the program name.
 * [register](https://github.com/doloopwhile/pyenv-register) - Register system installed pythons to pyenv environment
+* [ccache](https://github.com/yyuu/pyenv-ccache) - Make Python build faster, with using the leverage of `ccache`.
