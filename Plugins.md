@@ -21,3 +21,4 @@ This list is edited by pyenv maintainers.
 * [register](https://github.com/doloopwhile/pyenv-register) - Register system installed pythons to pyenv environment
 * [ccache](https://github.com/yyuu/pyenv-ccache) - Make Python build faster, with using the leverage of `ccache`.
 * [which-ext](https://github.com/yyuu/pyenv-which-ext) - Integrate pyenv and system commands. In particular the users of [Anaconda](https://store.continuum.io/cshop/anaconda/).
+* [alias](https://github.com/s1341/pyenv-alias) - Allows installation of python instances using user-supplied names. This allows multiple instances of the same python version to be installed.
