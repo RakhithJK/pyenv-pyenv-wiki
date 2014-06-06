@@ -55,7 +55,29 @@ Installing yaml-0.1.4...
 
 BUILD FAILED
 ```
+
 please, be sure to have "make" installed (```$ sudo apt-get install make```). On Ubuntu Server, by default, it doesn't.
+
+If you've got something like that:
+
+```
+Installing Python-2.7.7...
+
+ERROR: The Python zlib extension was not compiled. Missing the zlib?
+
+Please consult to the Wiki page to fix the problem.
+https://github.com/yyuu/pyenv/wiki/Common-build-problems
+
+BUILD FAILED
+```
+
+You could try this:
+
+```
+CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
+```
+
+It works for me on osx 10.10 DP.
 
 ## python-build: definition not found
 
