@@ -6,8 +6,8 @@ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm
     ``` 
 
-* Fedora: 
-    `yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel`
+* Fedora/CentOS: 
+    `yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel`
 
 * Mac: 
     ```bash brew install readline; brew link readline; pyenv install 2.7.5```
