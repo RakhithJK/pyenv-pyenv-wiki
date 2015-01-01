@@ -56,9 +56,9 @@ Installing yaml-0.1.4...
 BUILD FAILED
 ```
 
-please, be sure to have "make" installed (```$ sudo apt-get install make```). On Ubuntu Server, by default, it doesn't.
+Please, be sure to have "make" installed (```$ sudo apt-get install make```). On Ubuntu Server, by default, it doesn't.
 
-If you've got something like that:
+## Build failed: "ERROR: The Python zlib extension was not compiled. Missing the zlib?"
 
 ```
 Installing Python-2.7.7...
@@ -71,11 +71,12 @@ https://github.com/yyuu/pyenv/wiki/Common-build-problems
 BUILD FAILED
 ```
 
-On Mac OS X 10.9 and 10.10 you may need to set the CFLAGS environment variable when installing a new version in order for configure to find the zlib headers (XCode command line tools must be installed first):
+* On Mac OS X 10.9 and 10.10 you may need to set the CFLAGS environment variable when installing a new version in order for configure to find the zlib headers (XCode command line tools must be installed first):
+    ```
+    CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
+    ```
 
-```
-CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
-```
+* Alternatively, try reinstalling XCode command line tools for your OS (especially if you just upgraded your OS)
 
 ## python-build: definition not found
 
