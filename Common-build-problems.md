@@ -34,6 +34,8 @@ You can set your CFLAGS to accepted safe values to help get a little more speed.
 
     CFLAGS='-g -O2'
 
+comment: why "-g". Will not it make things slower?.
+
 ## Build failed - bad interpreter: Permission denied
 
 If you encounter this error while installing python and your server is a VPS, the **/tmp** directory where python-build download and compile the packages is probably mounted as **noexec**. You can check with your hosting provider if wether they provide a way to bypass this protection.
