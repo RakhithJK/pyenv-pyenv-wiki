@@ -43,7 +43,8 @@ such behavior is unpredictable and therefore harmful.
 Please search [existing issues][issues] and open a new one if you can't find any answers. Here's a script that dumps information about your current environment; you can use [Gist][] to paste it online and share the URL to it in your bug report:
 
 ```sh
-curl -s https://gist.github.com/mislav/4728286/raw/pyenv-doctor.sh | bash -x 2>&1
+git clone https://github.com/yyuu/pyenv-doctor.git "$(pyenv root)/plugins/pyenv-doctor"
+pyenv doctor
 ```
 
 ### Which shell startup file do I put pyenv config in?
