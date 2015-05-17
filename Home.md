@@ -63,3 +63,7 @@ results by adding pyenv to `~/.bashrc` instead.
 
 See [[Unix shell initialization]] for more info about how config files get
 loaded.
+
+### Debugging pyenv
+
+The `PYENV_DEBUG` is the environment variable to debug logging in pyenv. You can try to enable debug logging by setting something in the environment variable like `PYENV_DEBUG=1 pyenv versions`.
