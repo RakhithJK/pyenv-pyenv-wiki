@@ -80,6 +80,15 @@ BUILD FAILED
 
 * Alternatively, try reinstalling XCode command line tools for your OS (especially if you just upgraded your OS)
 
+## ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
+
+* If you have homebrew openssl and pyenv installed, you may need to tell the compiler where the openssl package is located:
+```
+CFLAGS="-I$(brew --prefix openssl)/include" \
+LDFLAGS="-L$(brew --prefix openssl)/lib" \
+pyenv install -v 3.4.3
+```
+
 ## python-build: definition not found
 
 To update your python-build definitions:
