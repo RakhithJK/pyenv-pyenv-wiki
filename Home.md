@@ -67,3 +67,21 @@ loaded.
 ### Debugging pyenv
 
 The `PYENV_DEBUG` is the environment variable to debug logging in pyenv. You can try to enable debug logging by setting something in the environment variable like `PYENV_DEBUG=1 pyenv versions`.
+
+### How to build CPython with Framework support on OS X
+
+Some of 3rd party tool like [PyInstaller](https://github.com/pyinstaller/pyinstaller) might require CPython installation built with `--enable-framework`. You can build CPython with shared library as follows.
+
+```sh
+$ env PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.5.0
+```
+
+### How to build CPython with `--enable-shared`
+
+Some of 3rd party tool like [PyInstaller](https://github.com/pyinstaller/pyinstaller) might require CPython installation built with `--enable-shared`. You can build CPython with shared library as follows.
+
+```sh
+$ env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.5.0
+```
+
+Since pyenv (precisely, python-build) will build CPython with configuring RPATH, you don't have to set `LD_LIBRARY_PATH` to specify library path on GNU/Linux.
