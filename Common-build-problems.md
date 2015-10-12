@@ -79,7 +79,9 @@ BUILD FAILED
     ```
 
 * Alternatively, try reinstalling XCode command line tools for your OS (especially if you just upgraded your OS)
-
+    ```
+    xcode-select --install
+    ```
 ## ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
 
 * If you have homebrew openssl and pyenv installed, you may need to tell the compiler where the openssl package is located:
