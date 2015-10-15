@@ -18,7 +18,7 @@ libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev
 
 ## Removing a python version
 
-    rm -rf .pyenv/versions/2.7.5
+    rm -rf ~/.pyenv/versions/2.7.5
 
 ## Installing a 32 bit python on 64 bit Mac OS X (this will *not* work on Linux)
 
