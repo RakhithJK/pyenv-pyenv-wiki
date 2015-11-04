@@ -5,12 +5,15 @@
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev
     ``` 
+* Fedora/CentOS/RHEL:
+    ```
+yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+    ```
 
-* Fedora/CentOS: 
-    `yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel`
-
-* Mac: 
-    ```bash brew install readline; brew link readline; pyenv install 2.7.5```
+* Mac OS X:
+    ```
+brew install readline
+    ```
 
 
 **NOTE**: `libssl-dev` is required when compiling Python, installing `libssl-dev` will actually install `zlib1g-dev`, which leads to uninstall and re-install Python versions (installed before installing `libssl-dev`). On Redhat and derivatives the package is named `openssl-devel`.
