@@ -4,6 +4,59 @@ To install pyenv, please refer to the [Readme](https://github.com/yyuu/pyenv/).
 
 ## Troubleshooting / FAQ
 
+### Suggested build environment
+
+pyenv will try its best to download and compile the wanted Python version,
+but sometimes compilation fails because of unmet system dependencies, or
+compilation succeeds but the new Python version exhibits weird failures at
+runtime. The following instructions are our recommendations for a sane build
+environment.
+
+* **Mac OS X:**
+
+  If you haven't done so, install Xcode Command Line Tools
+  (`xcode-select --install`) and [Homebrew][]. Then:
+
+    ```sh
+    # optional, but recommended:
+    brew install openssl readline
+    ```
+
+* **Ubuntu/Debian/Mint:**
+
+    ```sh
+    apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev
+    ```
+
+* **CentOS/Fedora 21 and below:**
+
+    ```sh
+    yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+    ```
+
+* **Fedora 22 and above:**
+    ```sh
+    dns install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+    ```
+
+* **openSUSE:**
+
+FIXME
+
+    ```sh
+     zypper install gcc automake openssl-devel ncurses-devel readline-devel zlib-devel
+     ```
+
+* **Arch Linux:**
+
+FIXME
+
+    ```sh
+    pacman -S base-devel openssl zlib
+    ```
+
+See also [Common build problems](https://github.com/yyuu/pyenv/wiki/Common-build-problems) for further information.
+
 ### How is this better than pythonbrew and pythonz?
 
 See [[Why pyenv?]]
