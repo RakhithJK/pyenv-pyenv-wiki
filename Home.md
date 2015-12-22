@@ -36,7 +36,7 @@ environment.
 
 * **Fedora 22 and above:**
     ```sh
-    dns install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+    dnf install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
     ```
 
 * **openSUSE:**
