@@ -36,9 +36,7 @@ If you want to install a Python interpreter that's available to all users and sy
 ## Make your pythons a little faster
 You can set your CFLAGS to accepted safe values to help get a little more speed.
 
-    CFLAGS='-g -O2'
-
-comment: why "-g". Will not it make things slower?.
+    CFLAGS='-O2'
 
 ## Build failed - bad interpreter: Permission denied
 
