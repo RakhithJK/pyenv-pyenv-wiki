@@ -4,6 +4,19 @@ To install pyenv, please refer to the [Readme](https://github.com/yyuu/pyenv/).
 
 ## Troubleshooting / FAQ
 
+### Python scripts or shell scripts that use python keep failing
+
+If you experience failure while executing a script that issues `python` command or executes another python script:
+ - try executing the command again in the appropriate `pyenv shell`
+ - check if the command is a python script or invokes a python script and fix the shebang to `#!/usr/bin/env python`
+ 
+Such failures usually show up as:
+  - incompatible python version, but you are certain that you have correct version installed
+  - module not found but you are certain that the module is installed
+  - the issue can be traced back to something related to `PYTHONPATH`
+
+Also, see below for suggested build environment.
+
 ### Suggested build environment
 
 pyenv will try its best to download and compile the wanted Python version,
