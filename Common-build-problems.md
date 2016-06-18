@@ -99,6 +99,12 @@ CFLAGS=-I/usr/include/openssl \
 LDFLAGS=-L/usr/lib64 \
 pyenv install -v 3.4.3
 ```
+* Alternatively, if you installed openssl with macports, use the following paths:
+```
+CFLAGS="-I/opt/local/include/" \
+LDFLAGS="-L/opt/local/lib/" \
+pyenv install -v 3.4.3
+```
 
 * On FreeBSD 10-RELEASE and 11-CURRENT, you may need to recompile ``security/openssl`` without SSLv2 support. (See [#464](https://github.com/yyuu/pyenv/issues/464#issuecomment-152821922)).
 
