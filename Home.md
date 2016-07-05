@@ -30,43 +30,44 @@ environment.
   If you haven't done so, install Xcode Command Line Tools
   (`xcode-select --install`) and [Homebrew][]. Then:
 
-    ```sh
-    # optional, but recommended:
-    brew install openssl readline
-    ```
+```sh
+# optional, but recommended:
+brew install openssl readline
+```
 
 * **Ubuntu/Debian/Mint:**
 
-    ```sh
-    apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev
-    ```
+```sh
+apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev
+```
 
 * **CentOS/Fedora 21 and below:**
 
-    ```sh
-    yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
-    ```
+```sh
+yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+```
 
 * **Fedora 22 and above:**
-    ```sh
-    dnf install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
-    ```
+
+```sh
+dnf install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+```
 
 * **openSUSE:**
 
 FIXME
 
-    ```sh
-     zypper install gcc automake openssl-devel ncurses-devel readline-devel zlib-devel
-     ```
+```sh
+zypper install gcc automake openssl-devel ncurses-devel readline-devel zlib-devel
+```
 
 * **Arch Linux:**
 
 FIXME
 
-    ```sh
-    pacman -S base-devel openssl zlib
-    ```
+```sh
+pacman -S base-devel openssl zlib
+```
 
 See also [Common build problems](https://github.com/yyuu/pyenv/wiki/Common-build-problems) for further information.
 
