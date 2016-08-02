@@ -88,7 +88,7 @@ https://github.com/yyuu/pyenv/wiki/Common-build-problems
 BUILD FAILED
 ```
 
-* On Mac OS X 10.9 and 10.10 you may need to set the CFLAGS environment variable when installing a new version in order for configure to find the zlib headers (XCode command line tools must be installed first):
+* On Mac OS X 10.9, 10.10 and 10.11 you may need to set the CFLAGS environment variable when installing a new version in order for configure to find the zlib headers (XCode command line tools must be installed first):
 
 ```sh
 CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
