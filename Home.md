@@ -28,7 +28,7 @@ environment.
 * **Mac OS X:**
 
   If you haven't done so, install Xcode Command Line Tools
-  (`xcode-select --install`) and [Homebrew][]. Then:
+  (`xcode-select --install`) and [Homebrew](http://brew.sh/). Then:
 
 ```sh
 # optional, but recommended:
@@ -72,6 +72,13 @@ FIXME: you may need to install `xz` to build some CPython version
 ```sh
 pacman -S base-devel openssl zlib
 ```
+
+* **Linuxbrew:**
+
+```sh
+brew install bzip2 openssl readline sqlite xz
+```
+
 
 See also [Common build problems](https://github.com/yyuu/pyenv/wiki/Common-build-problems) for further information.
 
