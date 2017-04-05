@@ -38,7 +38,7 @@ brew install openssl readline xz
 * **Ubuntu/Debian/Mint:**
 
 ```sh
-apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils
+apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev
 ```
 
 * **CentOS/Fedora 21 and below:**
@@ -46,7 +46,7 @@ apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libread
 FIXME: you may need to install `xz` to build some CPython version
 
 ```sh
-yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel
 ```
 
 * **Fedora 22 and above:**
@@ -54,7 +54,7 @@ yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel 
 FIXME: you may need to install `xz` to build some CPython version
 
 ```sh
-dnf install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+dnf install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel
 ```
 
 * **openSUSE:**
@@ -62,7 +62,7 @@ dnf install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-dev
 FIXME: you may need to install `xz` to build some CPython version
 
 ```sh
-zypper install gcc automake openssl-devel ncurses-devel readline-devel zlib-devel
+zypper install gcc automake openssl-devel ncurses-devel readline-devel zlib-devel tk-devel
 ```
 
 * **Arch Linux:**
