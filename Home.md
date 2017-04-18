@@ -1,6 +1,6 @@
 pyenv is a tool for simple Python version management.
 
-To install pyenv, please refer to the [Readme](https://github.com/yyuu/pyenv/).
+To install pyenv, please refer to the [Readme](https://github.com/pyenv/pyenv/).
 
 ## Troubleshooting / FAQ
 
@@ -80,7 +80,7 @@ brew install bzip2 openssl readline sqlite xz
 ```
 
 
-See also [Common build problems](https://github.com/yyuu/pyenv/wiki/Common-build-problems) for further information.
+See also [Common build problems](https://github.com/pyenv/pyenv/wiki/Common-build-problems) for further information.
 
 ### How is this better than pythonbrew and pythonz?
 
@@ -121,7 +121,7 @@ such behavior is unpredictable and therefore harmful.
 Please search [existing issues][issues] and open a new one if you can't find any answers. Here's a script that dumps information about your current environment; you can use [Gist][] to paste it online and share the URL to it in your bug report:
 
 ```sh
-git clone https://github.com/yyuu/pyenv-doctor.git "$(pyenv root)/plugins/pyenv-doctor"
+git clone https://github.com/pyenv/pyenv-doctor.git "$(pyenv root)/plugins/pyenv-doctor"
 pyenv doctor
 ```
 
