@@ -52,7 +52,7 @@ CFLAGS='-O2'
 
 ## Build failed - bad interpreter: Permission denied
 
-If you encounter this error while installing python and your server is a VPS, the **/tmp** directory where python-build download and compile the packages is probably mounted as **noexec**. You can check with your hosting provider if wether they provide a way to bypass this protection.
+If you encounter this error while installing python and your server is a VPS, the **/tmp** directory where python-build download and compile the packages is probably mounted as **noexec**. You can check with your hosting provider if whether they provide a way to bypass this protection.
 
 If the answer is no, just set the **$TMPDIR** environment variable to wherever you have a write + execution rights. For example:
 
