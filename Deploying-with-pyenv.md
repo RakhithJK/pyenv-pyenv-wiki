@@ -16,3 +16,10 @@ Interactive, non-interactive shells, cron jobs, and similar processes for the
 "app" user all must ensure that pyenv is present in the PATH:
 
     export PATH=~/.pyenv/shims:~/.pyenv/bin:"$PATH"
+
+## About systemd
+If you use systemd, the PATH must be real PATH, not shims:
+
+```
+Environment=PATH=/home/$USER/.pyenv/versions/$VERSION/bin:$PATH
+```
