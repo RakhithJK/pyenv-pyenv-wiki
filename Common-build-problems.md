@@ -10,8 +10,6 @@ xz-utils tk-dev
 
 * Fedora/CentOS/RHEL:
 
-FIXME: you may need to install `xz` to build some CPython version
-
 ```sh
 dnf install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
 ```
