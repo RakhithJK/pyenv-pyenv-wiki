@@ -13,7 +13,7 @@ xz-utils tk-dev
 FIXME: you may need to install `xz` to build some CPython version
 
 ```sh
-yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel
+dnf install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
 ```
 
 * Mac OS X:
