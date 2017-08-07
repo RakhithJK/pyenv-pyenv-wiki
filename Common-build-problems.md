@@ -116,7 +116,13 @@ CFLAGS=-I/usr/include/openssl \
 LDFLAGS=-L/usr/lib64 \
 pyenv install -v 3.4.3
 ```
+or (checked on ArchLinux):
 
+```sh
+export CFLAGS=-I/usr/include/openssl \
+export LDFLAGS=-L/usr/lib64 \
+pyenv install -v 3.4.3
+```
 * Alternatively, if you installed openssl with macports, use the following paths:
 
 ```sh
