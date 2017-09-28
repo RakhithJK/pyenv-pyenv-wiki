@@ -136,13 +136,3 @@ If you have python-build installed as an pyenv plugin:
 ```sh
 $ cd ~/.pyenv/plugins/python-build && git pull
 ```
-
-## mac os x 'git cirrus docker-image build' failures and solutions
-### docker build -t docker-registry:8081...
-### Get https://docker-registry:8081/v3/data_client/manifests/latest: no basic auth credentials
-In os x you likely need to designate your docker daemon to designate docker-registry:8081 as an 'insecure registry'
-```
-docker > preferences > daemon
-Add an insecure registry docker-registry:8081
-Apply and restart
-```
