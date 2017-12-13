@@ -14,7 +14,7 @@ xz-utils tk-dev
 dnf install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
 ```
 
-* Mac OS X:
+* macOS:
 
 ```sh
 brew install readline xz
@@ -87,7 +87,7 @@ https://github.com/yyuu/pyenv/wiki/Common-build-problems
 BUILD FAILED
 ```
 
-* On Mac OS X 10.9, 10.10 and 10.11 you may need to set the CFLAGS environment variable when installing a new version in order for configure to find the zlib headers (XCode command line tools must be installed first):
+* On Mac OS X 10.9, 10.10, 10.11 and 10.13 you may need to set the CFLAGS environment variable when installing a new version in order for configure to find the zlib headers (XCode command line tools must be installed first):
 
 ```sh
 CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
@@ -97,6 +97,12 @@ CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
 
 ```sh
 xcode-select --install
+```
+
+If you experience both issues with openssl and zlib, you can specify both search paths as a compiler flag:
+
+```sh
+CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib"
 ```
 
 ## ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
