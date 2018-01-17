@@ -14,6 +14,12 @@ xz-utils tk-dev
 dnf install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
 ```
 
+* openSUSE
+
+```sh
+zypper in zlib-devel bzip2 libbz2-devel readline-devel sqlite3 sqlite3-devel libopenssl-devel xz xz-devel
+```
+
 * macOS:
 
 ```sh
