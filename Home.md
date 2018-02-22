@@ -46,7 +46,7 @@ apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libread
 FIXME: you may need to install `xz` to build some CPython version
 
 ```sh
-yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel
+yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
 ```
 
 * **Fedora 22 and above:**
