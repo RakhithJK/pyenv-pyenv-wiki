@@ -38,7 +38,7 @@ brew install openssl readline xz
 * **Ubuntu/Debian/Mint:**
 
 ```sh
-apt-get install -y make build-essential libssl1.0-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev
+apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev
 ```
 
 * **CentOS/Fedora 21 and below:**
