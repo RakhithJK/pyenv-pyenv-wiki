@@ -32,7 +32,7 @@ environment.
 
 ```sh
 # optional, but recommended:
-brew install openssl readline xz
+brew install openssl readline sqlite3 xz zlib
 ```
 
 * **Ubuntu/Debian/Mint:**
