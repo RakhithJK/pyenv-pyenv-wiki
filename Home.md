@@ -77,7 +77,8 @@ pacman -S base-devel openssl zlib
 
 ```
 sudo eopkg it -c system.devel
-sudo eopkg install git gcc make zlib-devel bzip2-devel readline-devel sqlite3-devel openssl-devel tk-devel```
+sudo eopkg install git gcc make zlib-devel bzip2-devel readline-devel sqlite3-devel openssl-devel tk-devel
+```
 
 * **Linuxbrew:**
 
