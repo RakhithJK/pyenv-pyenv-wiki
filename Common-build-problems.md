@@ -150,6 +150,8 @@ pyenv install -v 3.4.3
 
 * On FreeBSD 10-RELEASE and 11-CURRENT, you may need to recompile ``security/openssl`` without SSLv2 support. (See [#464](https://github.com/yyuu/pyenv/issues/464#issuecomment-152821922)).
 
+* On Debian stretch, libssl-dev is OpenSSL 1.1.x, but support for that was only added in Python 2.7.13, 3.5.3 and 3.6.0.  To install earlier versions, you need to replace `libssl-dev` with `libssl1.0-dev`.  This is being tracked in https://github.com/pyenv/pyenv/issues/945.
+
 ## python-build: definition not found
 
 To update your python-build definitions:
