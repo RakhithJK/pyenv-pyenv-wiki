@@ -38,7 +38,7 @@ brew install openssl readline sqlite3 xz zlib
 * **Ubuntu/Debian/Mint:**
 
 ```sh
-apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev
+apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev
 ```
 
 * **CentOS/Fedora 21 and below:**
