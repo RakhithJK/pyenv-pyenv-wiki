@@ -11,11 +11,11 @@ xz-utils tk-dev libffi-dev
 * Fedora/CentOS/RHEL:
 
 ```sh
-sudo dnf install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
+sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
 ```
 Alternative of openssl-devel:
 ```sh
-sudo dnf install compat-openssl10-devel --allowerasing
+sudo yum install compat-openssl10-devel --allowerasing
 ```
 * openSUSE
 
