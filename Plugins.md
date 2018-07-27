@@ -23,4 +23,4 @@ This list is edited by pyenv maintainers.
 * [which-ext](https://github.com/pyenv/pyenv-which-ext) - Integrate pyenv and system commands. In particular the users of [Anaconda](https://store.continuum.io/cshop/anaconda/).
 * [alias](https://github.com/s1341/pyenv-alias) - Allows installation of python instances using user-supplied names. This allows multiple instances of the same python version to be installed.
 * [default-packages](https://github.com/jawshooah/pyenv-default-packages) - Installs a set of default packages any time you install a new version of python or create a new virtualenv
-* [pip-update](https://github.com/massongit/pyenv-pip-update) - Update all libraries managed by pip
+* [pip-update](https://github.com/massongit/pyenv-pip-update) - Update all libraries managed by `pip` or `conda` in all versions.
