@@ -7,6 +7,10 @@ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
 xz-utils tk-dev libffi-dev liblzma-dev
 ```
+Alternative of libreadline-dev:
+```sh
+sudo apt install libedit-dev
+```
 
 * Fedora/CentOS/RHEL:
 
@@ -18,6 +22,7 @@ Alternative of openssl-devel:
 ```sh
 sudo yum install compat-openssl10-devel --allowerasing
 ```
+
 * openSUSE
 
 ```sh
