@@ -108,6 +108,11 @@ BUILD FAILED
 CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
 ```
 
+* If you installed zlib with Homebrew, you can set the CPPFLAGS environment variable:
+```sh
+CPPFLAGS="-I/usr/local/opt/zlib/include" pyenv install -v 3.7.0
+```
+
 * Alternatively, try reinstalling XCode command line tools for your OS (especially if you just upgraded your OS)
 
 ```sh
