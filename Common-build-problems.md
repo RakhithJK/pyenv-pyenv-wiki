@@ -35,7 +35,7 @@ zypper in zlib-devel bzip2 libbz2-devel readline-devel sqlite3 sqlite3-devel lib
 brew install readline xz
 ```
 
-  When running Mojave or higher (10.14+) you will also [need to install the additional SDK headers](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes#3035624) by downloading them from [here](https://developer.apple.com/download/more):
+  When running Mojave or higher (10.14+) you will also [need to install the additional SDK headers](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes#3035624) by downloading them from [Apple Developers](https://developer.apple.com/download/more/?q=Command%20Line%20Tools). You can also check under `/Library/Developer/CommandLineTools/Packages/` as some versions of Mac OS will have the `pkg` locally.
 
 ```sh
 sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
