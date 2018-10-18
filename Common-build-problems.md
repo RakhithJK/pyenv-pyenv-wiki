@@ -12,7 +12,7 @@ Alternative of libreadline-dev:
 sudo apt install libedit-dev
 ```
 
-* Fedora/CentOS/RHEL:
+* Fedora/CentOS/RHEL(aws ec2):
 
 ```sh
 sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel \
