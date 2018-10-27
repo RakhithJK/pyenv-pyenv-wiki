@@ -89,7 +89,7 @@ sudo eopkg install git gcc make zlib-devel bzip2-devel readline-devel sqlite3-de
 * **Linuxbrew:**
 
 ```sh
-brew install bzip2 openssl readline sqlite xz
+brew install bzip2 libffi libxml2 libxmlsec1 openssl readline sqlite xz zlib
 ```
 
 
