@@ -29,6 +29,12 @@ sudo yum install compat-openssl10-devel --allowerasing
 zypper in zlib-devel bzip2 libbz2-devel readline-devel sqlite3 sqlite3-devel libopenssl-devel xz xz-devel
 ```
 
+* Alpine
+
+```sh
+apk add libffi-dev ncurses-dev openssl-dev readline-dev tk-dev xz-dev zlib-dev
+```
+
 * macOS:
 
 ```sh
