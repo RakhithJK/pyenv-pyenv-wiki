@@ -92,6 +92,18 @@ sudo eopkg install git gcc make zlib-devel bzip2-devel readline-devel sqlite3-de
 brew install bzip2 libffi libxml2 libxmlsec1 openssl readline sqlite xz zlib
 ```
 
+* **Alpine Linux:**
+
+```sh 
+apk add --no-cache git bash build-base libffi-dev openssl-dev bzip2-dev zlib-dev readline-dev sqlite-dev 
+```
+
+Installation of Python 3.7 may fail due to Python 3.7.0 issue [#34555](https://bugs.python.org/issue34555). Work around is to install the [linux system headers package](https://pkgs.alpinelinux.org/packages?name=linux-headers&branch=edge):
+
+```sh
+apk add linux-headers 
+```
+
 
 See also [Common build problems](https://github.com/pyenv/pyenv/wiki/Common-build-problems) for further information.
 
