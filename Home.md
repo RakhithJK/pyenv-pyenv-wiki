@@ -68,7 +68,7 @@ dnf install -y gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-dev
 FIXME: you may need to install `xz` to build some CPython version
 
 ```sh
-zypper install gcc automake openssl-devel ncurses-devel readline-devel zlib-devel tk-devel libffi-devel
+zypper install gcc automake openssl-devel ncurses-devel readline-devel zlib-devel tk-devel libffi-devel sqlite3-devel
 ```
 
 * **Arch Linux:**
