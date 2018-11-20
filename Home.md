@@ -179,6 +179,8 @@ Some of 3rd party tool like [PyInstaller](https://github.com/pyinstaller/pyinsta
 $ env PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.5.0
 ```
 
+Note: You'd better not `export` `PYTHON_CONFIGURE_OPTS` cause it breaks building of some distros like `miniconda` and `anaconda`.
+
 ### How to build CPython with `--enable-shared`
 
 Some of 3rd party tool like [PyInstaller](https://github.com/pyinstaller/pyinstaller) might require CPython installation built with `--enable-shared`. You can build CPython with shared library as follows.
