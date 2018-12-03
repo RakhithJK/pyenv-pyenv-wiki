@@ -193,3 +193,12 @@ If you have python-build installed as an pyenv plugin:
 ```sh
 $ cd ~/.pyenv/plugins/python-build && git pull
 ```
+
+## Mojave: missing "my_config.h"
+
+Instead of `brew install mysql`, use `brew install mysql@5.7`. Then run:
+```
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
+export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
+```
