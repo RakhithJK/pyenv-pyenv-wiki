@@ -26,7 +26,7 @@ sudo yum install compat-openssl10-devel --allowerasing
 * openSUSE
 
 ```sh
-zypper in zlib-devel bzip2 libbz2-devel readline-devel sqlite3 sqlite3-devel libopenssl-devel xz xz-devel
+zypper in zlib-devel bzip2 libbz2-devel libffi-devel libopenssl-devel readline-devel sqlite3 sqlite3-devel xz xz-devel 
 ```
 
 * Alpine
