@@ -1,4 +1,6 @@
-## Requirements:
+# Prerequisites
+
+Make sure to follow this guidance for your platform before any troubleshooting.
 
 * Ubuntu/Debian: 
 
@@ -41,7 +43,7 @@ apk add libffi-dev ncurses-dev openssl-dev readline-dev tk-dev xz-dev zlib-dev
 brew install readline xz
 ```
 
-  When running Mojave or higher (10.14+) you will also [need to install the additional SDK headers](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes#3035624) by downloading them from [Apple Developers](https://developer.apple.com/download/more/?q=Command%20Line%20Tools). You can also check under `/Library/Developer/CommandLineTools/Packages/` as some versions of Mac OS will have the `pkg` locally.
+When running Mojave or higher (10.14+) you will also [need to install the additional SDK headers](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes#3035624) by downloading them from [Apple Developers](https://developer.apple.com/download/more/?q=Command%20Line%20Tools). You can also check under `/Library/Developer/CommandLineTools/Packages/` as some versions of Mac OS will have the `pkg` locally.
 
 ```sh
 sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
@@ -199,3 +201,11 @@ If you have python-build installed as an pyenv plugin:
 ```sh
 $ cd ~/.pyenv/plugins/python-build && git pull
 ```
+
+## macOS: "ld: symbol(s) not found for architecture x86_64" (#1245)
+
+From ([#1245](https://github.com/pyenv/pyenv/issues/1245)).
+
+This may be caused by an incompatible version of `ar` bundled with brew-distributed binutils.
+
+To fix, either `brew remove binutils` or execute the install command with `AR=/usr/bin/ar`.
