@@ -18,7 +18,7 @@ sudo apt install libedit-dev
 
 ```sh
 sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel \
-openssl-devel xz xz-devel libffi-devel
+openssl-devel xz xz-devel libffi-devel findutils
 ```
 Alternative of openssl-devel:
 ```sh
