@@ -165,17 +165,6 @@ pyenv install -v 3.4.3
 ```
 Note: Python 3.7.0 will not compile on RHEL6 because it requires OpenSSL 1.0.2 or 1.1 and RHEL6 provides 1.0.1e
 
-On Ubuntu 14.04 on Dreamhost, an extra flag is required for Python 3.7+:
-* First, follow these instructions: https://help.dreamhost.com/hc/en-us/articles/360001435926-Installing-OpenSSL-locally-under-your-username
-* Then, run:
-```sh
-CFLAGS=-I$HOME/openssl/include \
-LDFLAGS=-L$HOME/openssl/lib \
-SSH=$HOME/openssl
-pyenv install -v 3.7.2
-```
-
-
 ```
   Could not build the ssl module!
   Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
@@ -198,6 +187,17 @@ CFLAGS="-I/opt/local/include/" \
 LDFLAGS="-L/opt/local/lib/" \
 pyenv install -v 3.4.3
 ```
+
+* On Ubuntu 14.04 on Dreamhost, an extra flag is required for Python 3.7+:
+  * First, follow these instructions: https://help.dreamhost.com/hc/en-us/articles/360001435926-Installing-OpenSSL-locally-under-your-username
+  * Then, run:
+```sh
+CFLAGS=-I$HOME/openssl/include \
+LDFLAGS=-L$HOME/openssl/lib \
+SSH=$HOME/openssl
+pyenv install -v 3.7.2
+```
+
 
 * On FreeBSD 10-RELEASE and 11-CURRENT, you may need to recompile ``security/openssl`` without SSLv2 support. (See [#464](https://github.com/yyuu/pyenv/issues/464#issuecomment-152821922)).
 
