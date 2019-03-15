@@ -179,6 +179,12 @@ LDFLAGS="-L/usr/lib/openssl-1.0" \
 CFLAGS="-I/usr/include/openssl-1.0" \
 pyenv install -v 3.4.3
 ```
+If you're having trouble to get it to compile older python versions(<3.5) even after installing the recommended packages on ubuntu, changing the openssl lib might help:
+
+```sh
+sudo apt-get remove libssl-dev
+sudo apt-get install libssl1.0-dev
+```
 
 * Alternatively, if you installed openssl with macports, use the following paths:
 
