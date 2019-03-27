@@ -165,9 +165,9 @@ pyenv install -v 3.4.3
 ```
 Note: Python 3.7.0 will not compile on RHEL6 because it requires OpenSSL 1.0.2 or 1.1 and RHEL6 provides 1.0.1e
 
->**Could not build the ssl module!**
->Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
->  LibreSSL 2.6.4 and earlier do not provide the necessary APIs, https://github.com/libressl->portable/portable/issues/381
+>**Could not build the ssl module!**  
+>Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().  
+>  LibreSSL 2.6.4 and earlier do not provide the necessary APIs, https://github.com/libressl-portable/portable/issues/381
 
 (assuming, of course, you don't compile and install your own openssl... don't know if that's possible.)
 
