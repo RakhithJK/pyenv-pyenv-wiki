@@ -111,7 +111,7 @@ Installing Python-2.7.7...
 ERROR: The Python zlib extension was not compiled. Missing the zlib?
 
 Please consult to the Wiki page to fix the problem.
-https://github.com/yyuu/pyenv/wiki/Common-build-problems
+https://github.com/pyenv/pyenv/wiki/Common-build-problems
 
 BUILD FAILED
 ```
