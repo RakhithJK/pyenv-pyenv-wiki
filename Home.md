@@ -117,13 +117,15 @@ The string read from a `.python-version` file must match the name of an existing
 directory in `~/.pyenv/versions/`. You can see the list of installed Python
 versions with `pyenv versions`.
 
-If you're using [python-build][], typically this will be one of [its Python version
+If you're using [python-build], typically this will be one of [its Python version
 names][versions].
 
 Other version managers might allow fuzzy version matching on the string read
 from `.python-version` file, e.g. they might allow "3.3" (without patch suffix)
 to match the latest Python 3.3 release. **pyenv will not support this**, because
 such behavior is unpredictable and therefore harmful.
+
+[python-build]: ../../tree/master/plugins/python-build
 
 ### How to verify that I have set up pyenv correctly?
 
@@ -139,16 +141,21 @@ such behavior is unpredictable and therefore harmful.
     echo $PATH | grep --color=auto "$(pyenv root)/shims"
     ```
 
-    If not, see the [`pyenv init` step][init] in installation instructions.
+    If not, see the `pyenv init` step in [installation instructions].
+
+[installation instructions]: ../../#installation
 
 ### pyenv is installed but things just aren't working for me!
 
-Please search [existing issues][issues] and open a new one if you can't find any answers. Here's a script that dumps information about your current environment; you can use [Gist][] to paste it online and share the URL to it in your bug report:
+Please search [existing issues][issues] and open a new one if you can't find any answers. Here's a script that dumps information about your current environment; you can use Gist to paste it online and share the URL to it in your bug report:
 
 ```sh
 git clone https://github.com/pyenv/pyenv-doctor.git "$(pyenv root)/plugins/pyenv-doctor"
 pyenv doctor
 ```
+
+[issues]: ../../issues
+[Gist]: https://gist.github.com/
 
 ### Which shell startup file do I put pyenv config in?
 
