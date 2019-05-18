@@ -182,6 +182,7 @@ If you're having trouble to get it to compile older python versions(<3.5) even a
 
 ```sh
 sudo apt-get remove libssl-dev
+sudo apt-get update
 sudo apt-get install libssl1.0-dev
 ```
 
