@@ -39,9 +39,9 @@ apk add libffi-dev ncurses-dev openssl-dev readline-dev tk-dev xz-dev zlib-dev
 * Arch and derivatives
 
 ```sh
-pacman -S --needed openssl zlib bzip2 readline sqlite wget curl llvm gnupg ncurses xz tk libffi python-pyopenssl git
+pacman -S --needed openssl zlib bzip2 readline sqlite wget curl llvm ncurses xz tk libffi python-pyopenssl git
 ```
-The library ncurses5 you would need an [AUR Helper](https://wiki.archlinux.org/index.php/AUR_helpers) in order to install. If using [YAY](https://aur.archlinux.org/packages/yay/):
+To install the library ncurses5 would require an [AUR Helper](https://wiki.archlinux.org/index.php/AUR_helpers) to install. If using [YAY](https://aur.archlinux.org/packages/yay/):
 
 ```sh
 yay -S ncurses5-compat-libs 
