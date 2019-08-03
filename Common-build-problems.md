@@ -28,7 +28,14 @@ sudo yum install compat-openssl10-devel --allowerasing
 * openSUSE
 
 ```sh
-zypper in zlib-devel bzip2 libbz2-devel libffi-devel libopenssl-devel readline-devel sqlite3 sqlite3-devel xz xz-devel 
+zypper in zlib-devel bzip2 libbz2-devel libffi-devel libopenssl-devel \
+readline-devel sqlite3 sqlite3-devel xz xz-devel 
+```
+
+For building from source with OpenSUSE you need the packages in pattern `devel_basis`
+
+```sh
+zypper in -t pattern devel_basis
 ```
 
 * Alpine
@@ -39,7 +46,8 @@ apk add libffi-dev ncurses-dev openssl-dev readline-dev tk-dev xz-dev zlib-dev
 * Arch and derivatives
 
 ```sh
-pacman -S --needed base-devel openssl zlib bzip2 readline sqlite wget curl llvm ncurses xz tk libffi python-pyopenssl git
+pacman -S --needed base-devel openssl zlib bzip2 readline sqlite wget curl \
+llvm ncurses xz tk libffi python-pyopenssl git
 ```
 The library ncurses5 would require an [AUR Helper](https://wiki.archlinux.org/index.php/AUR_helpers) to install. If using [YAY](https://aur.archlinux.org/packages/yay/):
 
@@ -64,7 +72,12 @@ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_heade
 ## Removing a python version
 
 ```sh
-rm -rf ~/.pyenv/versions/2.7.5
+rm -rf ~/.pyenv/versions/X.Y.Z
+```
+Replace X.Y.Z with the version that you want to remove. To list installed versions:
+
+```sh
+pyenv versions
 ```
 
 ## Installing a 32 bit python on 64 bit Mac OS X (this will *not* work on Linux)
