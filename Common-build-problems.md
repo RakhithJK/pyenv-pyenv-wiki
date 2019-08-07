@@ -169,6 +169,13 @@ If you experience issues with readline, you can also specify this as a compiler 
 CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib"
 ```
 
+If you are using macOS 10.14.6 with XCode 10.3, add the following:
+
+```sh
+SDKROOT=${XCODE_ROOT}/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk \
+MACOSX_DEPLOYMENT_TARGET=10.14
+```
+
 ## ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
 
 * If you have homebrew openssl and pyenv installed, you may need to tell the compiler where the openssl package is located:
