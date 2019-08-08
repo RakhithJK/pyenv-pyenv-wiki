@@ -17,7 +17,7 @@ sudo apt install libedit-dev
 * Fedora/CentOS/RHEL(aws ec2):
 
 ```sh
-sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel \
+sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel \
 openssl-devel xz xz-devel libffi-devel findutils
 ```
 Alternative of openssl-devel:
