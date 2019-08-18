@@ -32,7 +32,7 @@ zypper in zlib-devel bzip2 libbz2-devel libffi-devel libopenssl-devel \
 readline-devel sqlite3 sqlite3-devel xz xz-devel 
 ```
 
-For building from source with OpenSUSE you need the packages in pattern `devel_basis`
+For building Python versions from source with OpenSUSE you need the packages in pattern `devel_basis`
 
 ```sh
 zypper in -t pattern devel_basis
@@ -41,12 +41,18 @@ zypper in -t pattern devel_basis
 * Alpine
 
 ```sh
-apk add libffi-dev ncurses-dev openssl-dev readline-dev tk-dev xz-dev zlib-dev
+apk add build-base libffi-dev ncurses-dev openssl-dev readline-dev tk-dev xz-dev zlib-dev
 ```
+
+For installing Pyenv with [Pyenv-Installer](https://github.com/pyenv/pyenv-installer), you would need git, curl and bash
+```sh
+apk add git curl bash
+```
+
 * Arch and derivatives
 
 ```sh
-pacman -S --needed base-devel openssl zlib bzip2 readline sqlite wget curl \
+pacman -S --needed base-devel openssl zlib bzip2 readline sqlite curl \
 llvm ncurses xz tk libffi python-pyopenssl git
 ```
 The library ncurses5 would require an [AUR Helper](https://wiki.archlinux.org/index.php/AUR_helpers) to install. If using [YAY](https://aur.archlinux.org/packages/yay/):
