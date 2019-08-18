@@ -41,7 +41,10 @@ zypper in -t pattern devel_basis
 * Alpine
 
 ```sh
-apk add build-base libffi-dev ncurses-dev openssl-dev readline-dev tk-dev xz-dev zlib-dev
+apk add --no-cache bzip2-dev coreutils dpkg-dev dpkg expat-dev \
+findutils gcc gdbm-dev libc-dev libffi-dev libnsl-dev libtirpc-dev \
+linux-headers make ncurses-dev openssl-dev pax-utils readline-dev \
+sqlite-dev tcl-dev tk tk-dev util-linux-dev xz-dev zlib-dev
 ```
 
 For installing Pyenv with [Pyenv-Installer](https://github.com/pyenv/pyenv-installer), you would need git, curl and bash
