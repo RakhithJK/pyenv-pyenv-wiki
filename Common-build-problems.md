@@ -248,6 +248,8 @@ pyenv install -v 3.7.2
 
 * On Debian stretch (and Ubuntu bionic), libssl-dev is OpenSSL 1.1.x, but support for that was only added in Python 2.7.13, 3.5.3 and 3.6.0.  To install earlier versions, you need to replace `libssl-dev` with `libssl1.0-dev`.  This is being tracked in https://github.com/pyenv/pyenv/issues/945.
 
+* On Debian Jessie, you can use backports to install OpenSSL 1.0.2: `sudo apt -t jessie-backports install openssl`
+
 ## python-build: definition not found
 
 To update your python-build definitions:
