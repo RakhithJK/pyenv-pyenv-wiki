@@ -117,8 +117,7 @@ The string read from a `.python-version` file must match the name of an existing
 directory in `~/.pyenv/versions/`. You can see the list of installed Python
 versions with `pyenv versions`.
 
-If you're using [python-build], typically this will be one of [its Python version
-names][versions].
+If you're using [python-build](https://github.com/pyenv/pyenv/blob/master/plugins/python-build), typically this will be one of the versions listed by the `pyenv versions` command.
 
 Other version managers might allow fuzzy version matching on the string read
 from `.python-version` file, e.g. they might allow "3.3" (without patch suffix)
