@@ -70,12 +70,6 @@ yay -S ncurses5-compat-libs
 brew install readline xz
 ```
 
-When running Mojave or higher (10.14+) you will also [need to install the additional SDK headers](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes#3035624) by downloading them from [Apple Developers](https://developer.apple.com/download/more/?q=Command%20Line%20Tools). You can also check under `/Library/Developer/CommandLineTools/Packages/` as some versions of Mac OS will have the `pkg` locally.
-
-```sh
-sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-```
-
 **NOTE**: `libssl-dev` is required when compiling Python, installing `libssl-dev` will actually install `zlib1g-dev`, which leads to uninstall and re-install Python versions (installed before installing `libssl-dev`). On Redhat and derivatives the package is named `openssl-devel`.
 
 ## Removing a python version
