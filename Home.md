@@ -35,12 +35,6 @@ environment.
 brew install openssl readline sqlite3 xz zlib
 ```
 
-  When running Mojave or higher (10.14+) you will also [need to install the additional SDK headers](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes#3035624):
-
-```sh
-sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-```
-
 * **Ubuntu/Debian/Mint:**
 
 ```sh
