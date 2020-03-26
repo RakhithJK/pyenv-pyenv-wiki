@@ -153,12 +153,7 @@ CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
 CPPFLAGS="-I$(brew --prefix zlib)/include" pyenv install -v 3.7.0
 ```
 
-* Alternatively, try reinstalling XCode command line tools for your OS and when running Mojave or higher (10.14+) you will also [need to install the additional SDK headers](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes#3035624)
-
-```sh
-xcode-select --install
-sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-```
+* Alternatively, try reinstalling XCode command line tools for your OS
 
 If you experience both issues with openssl and zlib, you can specify both search paths as a compiler flag:
 
