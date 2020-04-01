@@ -57,6 +57,15 @@ FIXME: you may need to install `xz` to build some CPython version
 dnf install make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
 ```
 
+*  **Fedora Silverblue**
+
+```sh
+toolbox enter
+sudo dnf update vte-profile  # https://github.com/containers/toolbox/issues/390
+sudo dnf install "@Development Tools" zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
+```
+
 * **openSUSE:**
 
 FIXME: you may need to install `xz` to build some CPython version
