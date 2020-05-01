@@ -4,3 +4,4 @@
 * [[Deploying with pyenv]]
 * [[Understanding binstubs]]
 * [[Unix shell initialization]]
+* [[Alternate Installation Methods]]
