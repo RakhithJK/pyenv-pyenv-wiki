@@ -177,7 +177,7 @@ MACOSX_DEPLOYMENT_TARGET=10.14
 ## ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
 
 0. First, check
-  * if you actually have OpenSSL and its headers installed
+  * if you actually have OpenSSL and its headers installed (and for the right architecture and ecosystem if there are more than one at your machine)
   * if the problem is resolved by upgrading Pyenv to the latest release and to the head version
 
 1. **OpenSSL is installed to an uncommon location.**
