@@ -145,7 +145,7 @@ BUILD FAILED
 * On Mac OS X 10.9, 10.10, 10.11 and 10.13 you may need to set the CFLAGS environment variable when installing a new version in order for configure to find the zlib headers (XCode command line tools must be installed first):
 
 ```sh
-CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
+CPPFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
 ```
 
 * If you installed zlib with Homebrew, you can set the CPPFLAGS environment variable:
@@ -158,13 +158,13 @@ CPPFLAGS="-I$(brew --prefix zlib)/include" pyenv install -v 3.7.0
 If you experience both issues with openssl and zlib, you can specify both search paths as a compiler flag:
 
 ```sh
-CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib"
+CPPFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib"
 ```
 
 If you experience issues with readline, you can also specify this as a compiler flag:
 
 ```sh
-CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib"
+CPPFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib"
 ```
 
 If you are using macOS 10.14.6 with XCode 10.3, add the following:
@@ -179,7 +179,7 @@ MACOSX_DEPLOYMENT_TARGET=10.14
 * If you have homebrew openssl and pyenv installed, you may need to tell the compiler where the openssl package is located:
 
 ```sh
-CFLAGS="-I$(brew --prefix openssl)/include" \
+CPPFLAGS="-I$(brew --prefix openssl)/include" \
 LDFLAGS="-L$(brew --prefix openssl)/lib" \
 pyenv install -v 3.4.3
 ```
@@ -187,7 +187,7 @@ pyenv install -v 3.4.3
 or (checked on RHEL6):
 
 ```sh
-CFLAGS=-I/usr/include/openssl \
+CPPFLAGS=-I/usr/include/openssl \
 LDFLAGS=-L/usr/lib64 \
 pyenv install -v 3.4.3
 ```
@@ -203,7 +203,7 @@ or (checked on Arch Linux):
 
 ```sh
 LDFLAGS="-L/usr/lib/openssl-1.0" \
-CFLAGS="-I/usr/include/openssl-1.0" \
+CPPFLAGS="-I/usr/include/openssl-1.0" \
 pyenv install -v 3.4.3
 ```
 If you're having trouble to get it to compile older python versions(<3.5) even after installing the recommended packages on ubuntu, changing the openssl lib might help:
@@ -217,7 +217,7 @@ sudo apt-get install libssl1.0-dev
 * Alternatively, if you installed openssl with macports, use the following paths:
 
 ```sh
-CFLAGS="-I/opt/local/include/" \
+CPPFLAGS="-I/opt/local/include/" \
 LDFLAGS="-L/opt/local/lib/" \
 pyenv install -v 3.4.3
 ```
@@ -226,7 +226,7 @@ pyenv install -v 3.4.3
   * First, follow these instructions: https://help.dreamhost.com/hc/en-us/articles/360001435926-Installing-OpenSSL-locally-under-your-username
   * Then, run:
 ```sh
-CFLAGS=-I$HOME/openssl/include \
+CPPFLAGS=-I$HOME/openssl/include \
 LDFLAGS=-L$HOME/openssl/lib \
 SSH=$HOME/openssl
 pyenv install -v 3.7.2
