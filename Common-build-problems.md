@@ -182,78 +182,78 @@ MACOSX_DEPLOYMENT_TARGET=10.14
 
 1. **OpenSSL is installed to an uncommon location.**
 
-  Pass the location of its headers and libraries explicitly:
-
-  ```sh
-  CPPFLAGS="-I<openssl install prefix>/include" \
-  LDFLAGS="-L<openssl install prefix>/lib" \
-  pyenv install -v <python version>
-  ```
-
-  or, alternatively, [for Python 3.7+](https://bugs.python.org/issue32598), instead of `CPPFLAGS` and `LDFLAGS`:
-
-  ```sh
-  CONFIGURE_OPTS="--with-openssl=<openssl install prefix>"
-  ```
-
-  E.g. (invocations that worked for various people):
-
-  * RHEL6:
+    Pass the location of its headers and libraries explicitly:
 
     ```sh
-    CPPFLAGS=-I/usr/include/openssl \
-    LDFLAGS=-L/usr/lib64 \
-    pyenv install -v 3.4.3
+    CPPFLAGS="-I<openssl install prefix>/include" \
+    LDFLAGS="-L<openssl install prefix>/lib" \
+    pyenv install -v <python version>
     ```
 
-  * Arch Linux:
+    or, alternatively, [for Python 3.7+](https://bugs.python.org/issue32598), instead of `CPPFLAGS` and `LDFLAGS`:
 
     ```sh
-    LDFLAGS="-L/usr/lib/openssl-1.0" \
-    CPPFLAGS="-I/usr/include/openssl-1.0" \
-    pyenv install -v 3.4.3
+    CONFIGURE_OPTS="--with-openssl=<openssl install prefix>"
     ```
 
-  * If you installed openssl with macports:
+    E.g. (invocations that worked for various people):
 
-    ```sh
-    CPPFLAGS="-I/opt/local/include/" \
-    LDFLAGS="-L/opt/local/lib/" \
-    pyenv install -v 3.4.3
-    ```
+    * RHEL6:
 
-  * On Ubuntu 14.04 on Dreamhost, an extra flag is required for Python 3.7+:
-    * First, follow these instructions: https://help.dreamhost.com/hc/en-us/articles/360001435926-Installing-OpenSSL-locally-under-your-username
-    * Then, run:
       ```sh
-      CPPFLAGS=-I$HOME/openssl/include \
-      LDFLAGS=-L$HOME/openssl/lib \
-      SSH=$HOME/openssl
-      pyenv install -v 3.7.2
+      CPPFLAGS=-I/usr/include/openssl \
+      LDFLAGS=-L/usr/lib64 \
+      pyenv install -v 3.4.3
       ```
+
+    * Arch Linux:
+
+      ```sh
+      LDFLAGS="-L/usr/lib/openssl-1.0" \
+      CPPFLAGS="-I/usr/include/openssl-1.0" \
+      pyenv install -v 3.4.3
+      ```
+
+    * If you installed openssl with macports:
+
+      ```sh
+      CPPFLAGS="-I/opt/local/include/" \
+      LDFLAGS="-L/opt/local/lib/" \
+      pyenv install -v 3.4.3
+      ```
+
+    * On Ubuntu 14.04 on Dreamhost, an extra flag is required for Python 3.7+:
+        * First, follow these instructions: https://help.dreamhost.com/hc/en-us/articles/360001435926-Installing-OpenSSL-locally-under-your-username
+        * Then, run:
+          ```sh
+          CPPFLAGS=-I$HOME/openssl/include \
+          LDFLAGS=-L$HOME/openssl/lib \
+          SSH=$HOME/openssl
+          pyenv install -v 3.7.2
+          ```
 
 2. **Your OpenSSL version is incompatible with the Python version you're trying to install**
 
-  Old Python versions (generally, <3.5) require OpenSSL 1.0 while newer systems provide 1.1, and vice versa.
-  Note that OpenSSL 1.0 is EOL and by now practically unusable on the Internet due to using obsolete standards.
+    Old Python versions (generally, <3.5) require OpenSSL 1.0 while newer systems provide 1.1, and vice versa.
+    Note that OpenSSL 1.0 is EOL and by now practically unusable on the Internet due to using obsolete standards.
 
-  **Install the right OpenSSL version and point the build to its location as per above if needed.**
+    Install the right OpenSSL version and point the build to its location as per above if needed.
 
-  E.g.:
+    E.g.:
 
-  * On Debian stretch and Ubuntu bionic), libssl-dev is OpenSSL 1.1.x, but support for that was only added in Python 2.7.13, 3.5.3 and 3.6.0.  To install earlier versions, you need to replace `libssl-dev` with `libssl1.0-dev`.
+    * On Debian stretch and Ubuntu bionic, `libssl-dev` is OpenSSL 1.1.x, but support for that was only added in Python 2.7.13, 3.5.3 and 3.6.0.  To install earlier versions, you need to replace `libssl-dev` with `libssl1.0-dev`.
 
-    ```sh
-    sudo apt-get remove libssl-dev
-    sudo apt-get update
-    sudo apt-get install libssl1.0-dev
-    ```
+      ```sh
+      sudo apt-get remove libssl-dev
+      sudo apt-get update
+      sudo apt-get install libssl1.0-dev
+      ```
 
-    https://github.com/pyenv/pyenv/issues/945#issuecomment-409627448 has a more complex workaround that preserves `libssl-dev`.
+      https://github.com/pyenv/pyenv/issues/945#issuecomment-409627448 has a more complex workaround that preserves `libssl-dev`.
 
-  * On FreeBSD 10-RELEASE and 11-CURRENT, you may need to recompile ``security/openssl`` without SSLv2 support. (See [#464](https://github.com/yyuu/pyenv/issues/464#issuecomment-152821922)).
+    * On FreeBSD 10-RELEASE and 11-CURRENT, you may need to recompile ``security/openssl`` without SSLv2 support. (See [#464](https://github.com/yyuu/pyenv/issues/464#issuecomment-152821922)).
 
-  * On Debian Jessie, you can use backports to install OpenSSL 1.0.2: `sudo apt -t jessie-backports install openssl`
+    * On Debian Jessie, you can use backports to install OpenSSL 1.0.2: `sudo apt -t jessie-backports install openssl`
 
 ## python-build: definition not found
 
