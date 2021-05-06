@@ -234,7 +234,7 @@ MACOSX_DEPLOYMENT_TARGET=10.14
 
 2. **Your OpenSSL version is incompatible with the Python version you're trying to install**
 
-    Old Python versions (generally, <3.5) require OpenSSL 1.0 while newer systems provide 1.1, and vice versa.
+    Old Python versions (generally, <3.5 and <2.7.13) require OpenSSL 1.0 while newer systems provide 1.1, and vice versa.
     Note that OpenSSL 1.0 is EOL and by now practically unusable on the Internet due to using obsolete standards.
 
     Install the right OpenSSL version and point the build to its location as per above if needed.
