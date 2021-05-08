@@ -96,13 +96,6 @@ If you want to install a Python interpreter that's available to all users and sy
 sudo python-build 3.3.2 /usr/local/
 ```
 
-## Make your pythons a little faster
-You can set your CFLAGS to accepted safe values to help get a little more speed.
-
-```sh
-CFLAGS='-O2'
-```
-
 ## Build failed - bad interpreter: Permission denied
 
 If you encounter this error while installing python and your server is a VPS, the **/tmp** directory where python-build download and compile the packages is probably mounted as **noexec**. You can check with your hosting provider if whether they provide a way to bypass this protection.
