@@ -248,6 +248,7 @@ E.g.:
 
 * On Debian Jessie, you can use backports to install OpenSSL 1.0.2: `sudo apt -t jessie-backports install openssl`
 
+
 ## python-build: definition not found
 
 To update your python-build definitions:
@@ -265,3 +266,31 @@ From ([#1245](https://github.com/pyenv/pyenv/issues/1245)).
 This may be caused by an incompatible version of `ar` bundled with brew-distributed binutils.
 
 To fix, either `brew remove binutils` or execute the install command with `AR=/usr/bin/ar`.
+
+## Python cannot find a dependent dynamic library even though it's installed
+
+If you're getting messages lke this -- but you do have the corresponding package installed:
+
+```
+libreadline.so.7: cannot open shared object file: No such file or directory
+```
+
+**Check if the dynamic library's version you have installed is the same as what Python expects:**
+
+$ ls /lib/libreadline.so*
+/lib/libreadline.so  /lib/libreadline.so.8  /lib/libreadline.so.8.0
+
+Beside build time, this can also happen for an already installed version if:
+
+* You've installed a prebuilt version that was built for a different environment
+
+    Many installation scripts for prebuilt versions give you a warning in such a case.
+
+    * Get or compile the right version of the library if possible
+        * it needs to be compiled for your system to avoid binary incompatibilies, so the best bets are either building from source or getting a binary from an official source for your distro; or
+    * Replace the prebuilt version with a source one (usually, these are suffixed with `-src` if both a prebuilt and a source versions are provided)
+
+* You've updated a dependent library on your system to a different major version since the time you had compiled Python
+
+    * The easiest way would be to rebuild all affected Python installations against the new version of the library with `pyenv install <version> --force`
+    * (You can also get or compile the right version of the library instead as per above)
