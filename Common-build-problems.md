@@ -260,4 +260,4 @@ Beside build time, this can also happen for an already installed version if:
 
 * You've updated a dependent library on your system to a version with a different library filename (generally, to a new major version) since the time you had compiled Python
 
-    * The easiest way would be to rebuild all affected Python installations against the new version of the library with `pyenv install <version> --force`
+    * The easiest way is to rebuild all affected Python installations against the new version of the library with `pyenv install <version> --force`
