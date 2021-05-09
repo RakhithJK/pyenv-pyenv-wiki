@@ -45,75 +45,70 @@ environment.
 
 * **Ubuntu/Debian/Mint:**
 
-```sh
-sudo apt-get update; sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-```
+    ```sh
+    sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+    libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+    ```
 
 * **CentOS/Fedora 21 and below:**
 
-FIXME: you may need to install `xz` to build some CPython version
-
-```sh
-yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
-```
+    ```sh
+    yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
+    ```
 
 * **Fedora 22 and above:**
 
-FIXME: you may need to install `xz` to build some CPython version
-
-```sh
-dnf install make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
-```
+    ```sh
+    dnf install make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
+    ```
 
 *  **Fedora Silverblue**
 
-```sh
-toolbox enter
-sudo dnf update vte-profile  # https://github.com/containers/toolbox/issues/390
-sudo dnf install "@Development Tools" zlib-devel bzip2 bzip2-devel readline-devel sqlite \
-sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
-```
+    ```sh
+    toolbox enter
+    sudo dnf update vte-profile  # https://github.com/containers/toolbox/issues/390
+    sudo dnf install "@Development Tools" zlib-devel bzip2 bzip2-devel readline-devel sqlite \
+    sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
+    ```
 
 * **openSUSE:**
 
-FIXME: you may need to install `xz` to build some CPython version
-
-```sh
-zypper install gcc automake bzip2 libbz2-devel xz xz-devel openssl-devel ncurses-devel readline-devel zlib-devel tk-devel libffi-devel sqlite3-devel
-```
+    ```sh
+    zypper install gcc automake bzip2 libbz2-devel xz xz-devel openssl-devel ncurses-devel \
+    readline-devel zlib-devel tk-devel libffi-devel sqlite3-devel
+    ```
 
 * **Arch Linux:**
 
-FIXME: you may need to install `xz` to build some CPython version
-
-```sh
-pacman -S base-devel openssl zlib
-```
+    ```sh
+    pacman -S base-devel openssl zlib xz
+    ```
 
 * **Solus:**
 
-```
-sudo eopkg it -c system.devel
-sudo eopkg install git gcc make zlib-devel bzip2-devel readline-devel sqlite3-devel openssl-devel tk-devel
-```
+    ```
+    sudo eopkg it -c system.devel
+    sudo eopkg install git gcc make zlib-devel bzip2-devel readline-devel sqlite3-devel openssl-devel tk-devel
+    ```
 
 * **Linuxbrew:**
 
-```sh
-brew install bzip2 libffi libxml2 libxmlsec1 openssl readline sqlite xz zlib
-```
+    ```sh
+    brew install bzip2 libffi libxml2 libxmlsec1 openssl readline sqlite xz zlib
+    ```
 
 * **Alpine Linux:**
 
-```sh 
-apk add --no-cache git bash build-base libffi-dev openssl-dev bzip2-dev zlib-dev readline-dev sqlite-dev 
-```
+    ```sh 
+    apk add --no-cache git bash build-base libffi-dev openssl-dev bzip2-dev zlib-dev readline-dev sqlite-dev 
+    ```
 
-Installation of Python 3.7 may fail due to Python 3.7.0 issue [#34555](https://bugs.python.org/issue34555). Work around is to install the [linux system headers package](https://pkgs.alpinelinux.org/packages?name=linux-headers&branch=edge):
+    * Installation of Python 3.7 may fail due to Python 3.7.0 issue [#34555](https://bugs.python.org/issue34555). A workaround is to install the [linux system headers package](https://pkgs.alpinelinux.org/packages?name=linux-headers&branch=edge):
 
-```sh
-apk add linux-headers 
-```
+        ```sh
+        apk add linux-headers 
+        ```
 
 
 See also [Common build problems](https://github.com/pyenv/pyenv/wiki/Common-build-problems) for further information.
