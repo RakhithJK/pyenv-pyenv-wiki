@@ -2,7 +2,7 @@
 
 Make sure to have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment before any troubleshooting.
 
-Below are some alternative packages that are are not in the recommended set and should generally only be considered when there are special needs and/or problems with those in it.
+Below are some alternative packages that are not in the recommended set and should generally only be considered when there are special needs and/or problems with those in it.
 <!-- Updates to the recommended set should go on the above link rather than here! -->
 
 * Ubuntu/Debian: 
