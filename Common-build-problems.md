@@ -6,13 +6,13 @@ Below are some alternatives to those
 
 * Ubuntu/Debian: 
 
-    * Alternative of libreadline-dev:
+    * Alternative to libreadline-dev:
 
         ```sh
         sudo apt install libedit-dev
         ```
 
-    * An [inferior alternative](https://github.com/docker-library/python/issues/235) for `libncursesw` if it's not available:
+    * An [inferior alternative](https://github.com/docker-library/python/issues/235) to `libncursesw`:
 
         ```sh
         sudo apt install libncurses5-dev
@@ -21,23 +21,15 @@ Below are some alternatives to those
 
 * Fedora/CentOS/RHEL(aws ec2):
 
-    * Alternative of openssl-devel:
+    * Alternative to openssl-devel:
     
         ```sh
         sudo yum install compat-openssl10-devel --allowerasing
         ```
 
-* openSUSE
-
-    For building Python versions from source with OpenSUSE you need the packages in pattern `devel_basis`
-
-    ```sh
-    zypper in -t pattern devel_basis
-    ```
-
 * Arch and derivatives
 
-    The library ncurses5 would require an [AUR Helper](https://wiki.archlinux.org/index.php/AUR_helpers) to install. If using [YAY](https://aur.archlinux.org/packages/yay/):
+    Installing an older version of ncurses, `ncurses5`, requires an [AUR Helper](https://wiki.archlinux.org/index.php/AUR_helpers) to install. If using [YAY](https://aur.archlinux.org/packages/yay/):
 
     ```sh
     yay -S ncurses5-compat-libs 
@@ -46,7 +38,7 @@ Below are some alternatives to those
 ## Removing a python version manually
 
 ```sh
-rm -rf ~/.pyenv/versions/X.Y.Z
+rm -rf "$(pyenv root)/versions/X.Y.Z"
 ```
 Where "X.Y.Z" is the version that you want to remove. To list installed versions:
 
