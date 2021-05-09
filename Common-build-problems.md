@@ -194,7 +194,7 @@ E.g. (invocations that worked for various people):
 Old Python versions (for CPython, <3.5.3 and <2.7.13) require OpenSSL 1.0 while newer systems provide 1.1, and vice versa.  
 Note that OpenSSL 1.0 is EOL and by now practically unusable on the Internet due to using obsolete standards.
 
-Install the right OpenSSL version and point the build to its location as per above if needed.
+Install the right OpenSSL version, and point the build to its location as per above if needed.
 
 E.g.:
 
@@ -233,16 +233,20 @@ To fix, either `brew remove binutils` or execute the install command with `AR=/u
 
 ## Python cannot find a dependent dynamic library even though it's installed
 
-If you're getting messages lke this -- but you do have the corresponding package installed:
+If you're getting messages like this:
 
 ```
 libreadline.so.7: cannot open shared object file: No such file or directory
 ```
 
+but you do have the corresponding package installed.
+
 **Check if the dynamic library's version you have installed is the same as what Python expects:**
 
+```
 $ ls /lib/libreadline.so*
 /lib/libreadline.so  /lib/libreadline.so.8  /lib/libreadline.so.8.0
+```
 
 Beside build time, this can also happen for an already installed version if:
 
@@ -250,11 +254,10 @@ Beside build time, this can also happen for an already installed version if:
 
     Many installation scripts for prebuilt versions give you a warning in such a case.
 
-    * Get or compile the right version of the library if possible
-        * it needs to be compiled for your system to avoid binary incompatibilies, so the best bets are either building from source or getting a binary from an official source for your distro; or
-    * Replace the prebuilt version with a source one (usually, these are suffixed with `-src` if both a prebuilt and a source versions are provided)
+    * Replace the prebuilt version with a source one (usually, these are suffixed with `-src` if both a prebuilt and a source versions are provided); or
+    * (not recommended, will make the system harder to maintain) Get or compile the right version of the library
+        * it needs to be compiled for your system to avoid binary incompatibilies, so the best bets are either building from source or getting a binary from an official source for your distro
 
-* You've updated a dependent library on your system to a different major version since the time you had compiled Python
+* You've updated a dependent library on your system to a version with a different library filename (generally, to a new major version) since the time you had compiled Python
 
     * The easiest way would be to rebuild all affected Python installations against the new version of the library with `pyenv install <version> --force`
-    * (You can also get or compile the right version of the library instead as per above)
