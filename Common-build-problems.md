@@ -13,7 +13,7 @@ Below are some alternative packages that are are not in the recommended set and 
         sudo apt install libedit-dev
         ```
 
-    * An [inferior alternative](https://github.com/docker-library/python/issues/235) to `libncursesw`:
+    * An [inferior alternative](https://github.com/docker-library/python/issues/235) to `libncursesw5`:
 
         ```sh
         sudo apt install libncurses5-dev
