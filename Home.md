@@ -88,6 +88,12 @@ environment.
         apk add linux-headers 
         ```
 
+* **Void Linux:**
+
+    ```sh
+    xbps-install base-devel bzip2-devel openssl openssl-devel readline readline-devel sqlite-devel xz zlib zlib-devel
+    ```
+
 
 See also [Common build problems](https://github.com/pyenv/pyenv/wiki/Common-build-problems) for further information.
 
