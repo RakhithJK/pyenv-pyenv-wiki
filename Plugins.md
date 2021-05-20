@@ -27,6 +27,6 @@ These are not maintained or tested by the `pyenv` team, so use at your own risk!
 * [register](https://github.com/doloopwhile/pyenv-register) - Register system installed pythons to pyenv environment
 * [alias](https://github.com/s1341/pyenv-alias) - Allows installation of python instances using user-supplied names. This allows multiple instances of the same python version to be installed.
 * [default-packages](https://github.com/jawshooah/pyenv-default-packages) - Installs a set of default packages any time you install a new version of python or create a new virtualenv
-* [pip-update](https://github.com/massongit/pyenv-pip-update), [pip-upgrade](https://github.com/zyrikby/pyenv-pip-upgrade) - Update all libraries managed by pip or conda in all environments.
+* [pip-update](https://github.com/massongit/pyenv-pip-update), [pip-upgrade](https://github.com/zyrikby/pyenv-pip-upgrade) - Update all libraries managed by pip or conda in multiple environments.
 * [choice](https://github.com/fizista/pyenv-choice) - Allows you to choose which version of Python you will use for a given program name, if there are multiple versions of this program.
 * [fix-version](https://github.com/sprout42/pyenv-fix-version) - Provides a `pyenv fix-version` command to try and fix up any missing library dependencies there may be for an installed python version.
