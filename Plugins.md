@@ -12,7 +12,7 @@ accordingly somewhere in `$PYENV_HOOK_PATH`.
 * [virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper) - allow you to play pyenv with virtualenvwrapper
 * [pip-rehash](https://github.com/pyenv/pyenv-pip-rehash) - Automatically run `pyenv rehash` every time you install a new package via pip
 * [pip-migrate](https://github.com/pyenv/pyenv-pip-migrate) - Migrate pip packages from a Python version to another
-* [update](https://github.com/pyenv/pyenv-update) - Update pyenv and plugins
+* [update](https://github.com/pyenv/pyenv-update), [upgrade](https://github.com/zyrikby/pyenv-pip-upgrade) - Update pyenv and plugins
 * [installer](https://github.com/pyenv/pyenv-installer) - This tools is used to install `pyenv` and friends
 * [doctor](https://github.com/pyenv/pyenv-doctor) - Verify pyenv installation
 * [ccache](https://github.com/pyenv/pyenv-ccache) - Make Python build faster, with using the leverage of `ccache`.
