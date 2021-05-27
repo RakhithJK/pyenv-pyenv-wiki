@@ -60,7 +60,7 @@ environment.
 * **Arch Linux:**
 
     ```sh
-    pacman -S base-devel openssl zlib xz
+    pacman -S --needed base-devel openssl zlib xz
     ```
 
 * **Solus:**
