@@ -16,7 +16,6 @@ accordingly somewhere in `$PYENV_HOOK_PATH`.
 * [installer](https://github.com/pyenv/pyenv-installer) - This tools is used to install `pyenv` and friends
 * [doctor](https://github.com/pyenv/pyenv-doctor) - Verify pyenv installation
 * [ccache](https://github.com/pyenv/pyenv-ccache) - Make Python build faster, with using the leverage of `ccache`.
-* [which-ext](https://github.com/pyenv/pyenv-which-ext) - Integrate pyenv and system commands. In particular the users of [Anaconda](https://store.continuum.io/cshop/anaconda/). **No longer needed [since `v1.2.24`](https://github.com/pyenv/pyenv/pull/1797).**
 
 ## Community plugins
 Thanks to the hard work of the community, there are numerous other pyenv plugins to extend functionality for other use cases.
