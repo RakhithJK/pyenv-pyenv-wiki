@@ -139,15 +139,15 @@ such behavior is unpredictable and therefore harmful.
     which pyenv
     ```
 
-2.  Check that pyenv's shims directory is in PATH:
+2.  Check that pyenv's shims directory is in your PATH:
 
     ```sh
     echo $PATH | grep --color=auto "$(pyenv root)/shims"
     ```
 
-    If not, see the `pyenv init` step in [installation instructions].
+    If not, see [Configure your shell's environment for pyenv] in the installation instructions.
 
-[installation instructions]: ../../#installation
+[Configure your shell's environment for pyenv]: ../#basic-github-checkout
 
 
 ### pyenv is installed but things just aren't working for me!
@@ -159,7 +159,7 @@ git clone https://github.com/pyenv/pyenv-doctor.git "$(pyenv root)/plugins/pyenv
 pyenv doctor
 ```
 
-[issues]: ../../issues
+[issues]: https://github.com/pyenv/pyenv/issues
 [Gist]: https://gist.github.com/
 
 
