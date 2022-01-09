@@ -23,10 +23,19 @@ Below are some alternative packages that are not in the recommended set and shou
 * Fedora/CentOS/RHEL(aws ec2):
 
     * Alternative to openssl-devel:
+
+        * If you need OpenSSL 1.0:
     
-        ```sh
-        sudo yum install compat-openssl10-devel --allowerasing
-        ```
+            ```sh
+            sudo yum install compat-openssl10-devel --allowerasing
+            ```
+
+        * If you need OpenSSL 1.1:
+
+            ```sh
+            sudo yum install openssl11-devel --allowerasing
+            ```
+
 
 * Arch and derivatives
 
