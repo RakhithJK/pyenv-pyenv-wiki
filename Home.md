@@ -47,7 +47,7 @@ environment.
     toolbox enter
     sudo dnf update vte-profile  # https://github.com/containers/toolbox/issues/390
     sudo dnf install "@Development Tools" zlib-devel bzip2 bzip2-devel readline-devel sqlite \
-    sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
+    sqlite-devel openssl-devel xz xz-devel libffi-devel findutils tk-devel
     ```
 
 * **openSUSE:**
@@ -60,7 +60,7 @@ environment.
 * **Arch Linux:**
 
     ```sh
-    pacman -S --needed base-devel openssl zlib xz
+    pacman -S --needed base-devel openssl zlib xz tk
     ```
 
 * **Solus:**
@@ -70,16 +70,10 @@ environment.
     sudo eopkg install git gcc make zlib-devel bzip2-devel readline-devel sqlite3-devel openssl-devel tk-devel
     ```
 
-* **Linuxbrew:**
-
-    ```sh
-    brew install bzip2 libffi libxml2 libxmlsec1 openssl readline sqlite xz zlib
-    ```
-
 * **Alpine Linux:**
 
     ```sh 
-    apk add --no-cache git bash build-base libffi-dev openssl-dev bzip2-dev zlib-dev xz-dev readline-dev sqlite-dev
+    apk add --no-cache git bash build-base libffi-dev openssl-dev bzip2-dev zlib-dev xz-dev readline-dev sqlite-dev tk-dev
     ```
 
     * Installation of Python 3.7 may fail due to Python 3.7.0 issue [#34555](https://bugs.python.org/issue34555). A workaround is to install the [linux system headers package](https://pkgs.alpinelinux.org/packages?name=linux-headers&branch=edge):
