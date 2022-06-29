@@ -162,6 +162,14 @@ or, alternatively, [for Python 3.7+](https://bugs.python.org/issue32598), instea
 CONFIGURE_OPTS="--with-openssl=<openssl install prefix>"
 ```
 
+or
+
+```sh
+LDFLAGS="-Wl,-rpath,<openssl install prefix>/lib" \
+CONFIGURE_OPTS="--with-openssl=<openssl install prefix>" \
+pyenv install -v <python version>
+```
+
 E.g. (invocations that worked for various people):
 
 * RHEL6:
