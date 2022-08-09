@@ -180,6 +180,14 @@ E.g. (invocations that worked for various people):
     pyenv install -v 3.4.3
     ```
 
+* CentOS 7 with OpenSSL 1.1.1:
+
+    ```sh
+    CPPFLAGS=-I/usr/include/openssl11 \
+    LDFLAGS=-L/usr/lib64/openssl11 \
+    pyenv install -v 3.10.6
+    ```
+
 * Arch Linux:
 
     ```sh
