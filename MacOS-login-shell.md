@@ -30,6 +30,7 @@ There are two possible ways here.
 * `System Preferences` > `Users and groups` > Open the padlock to allow changes >
 Right click on the corresponding user's name > `Advanced options` > Select the
 shell from the dropdown list next to `Login shell`
+  * Alternatively, in the terminal: `chsh -s <shell>`
 
 * Then, in the Terminal app: `Preferences` > `General` > `Open shells with` > `Predefined login shell`
 
