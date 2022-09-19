@@ -1,3 +1,5 @@
+(See the "Pages" link above for a full list of wiki pages.)
+
 * [[FAQ|Home]]
 * [[Common build problems]]
 * [[pyenv plugins|Plugins]]
