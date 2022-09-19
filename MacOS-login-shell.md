@@ -1,6 +1,6 @@
 # Configure the terminal to run your shell as a login shell
 
-The stock shell configuration examples for MacOS assume that the shell in the terminal runs as a login shell.
+The stock shell configuration examples for Pyenv 2.0.0-2.2.5 for MacOS assume that the shell in the terminal runs as a login shell.
 
 ## Check if the current shell is a login shell
 
