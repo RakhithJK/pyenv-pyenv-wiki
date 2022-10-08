@@ -143,7 +143,7 @@ MACOSX_DEPLOYMENT_TARGET=10.14
 
 If you are using Ubuntu/Debian, you need the following packages:
 ```sh
-sudo apt install libssl-dev libbz2-dev libsqlite3-dev
+sudo apt install zlib1g zlib1g-dev libssl-dev libbz2-dev libsqlite3-dev
 ```
 
 ## ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
