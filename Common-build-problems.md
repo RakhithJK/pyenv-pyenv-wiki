@@ -13,6 +13,7 @@ Below are some alternative packages that are not in the recommended set and shou
         sudo apt install libedit-dev
         ```
 
+
     * An [inferior alternative](https://github.com/docker-library/python/issues/235) to `libncursesw5`:
 
         ```sh
@@ -138,6 +139,11 @@ If you are using macOS 10.14.6 with XCode 10.3, add the following:
 ```sh
 SDKROOT=${XCODE_ROOT}/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk \
 MACOSX_DEPLOYMENT_TARGET=10.14
+```
+
+If you are using Ubuntu/Debian, you need the following packages:
+```sh
+sudo apt install libssl-dev libbz2-dev libsqlite3-dev
 ```
 
 ## ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
