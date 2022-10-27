@@ -49,7 +49,7 @@ Below are some alternative packages that are not in the recommended set and shou
 ## Removing a python version manually
 
 ```sh
-rm -rf "~/.pyenv/versions/X.Y.Z"
+rm -rf ~/.pyenv/versions/"X.Y.Z"
 ```
 Where "X.Y.Z" is the version that you want to remove. To list installed versions:
 
