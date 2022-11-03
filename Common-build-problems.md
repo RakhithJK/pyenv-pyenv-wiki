@@ -1,25 +1,23 @@
 - [Prerequisites](#prerequisites)
 - [Removing a python version manually](#removing-a-python-version-manually)
-- [Installing a 32 bit python on 64 bit Mac OS X (this will *not* work on Linux)](#installing-a-32-bit-python-on-64-bit-mac-os-x--this-will--not--work-on-linux-)
+- [Installing a 32 bit python on 64 bit Mac OS X (this will *not* work on Linux)](#installing-a-32-bit-python-on-64-bit-mac-os-x-this-will-not-work-on-linux-)
 - [Installing a system-wide Python](#installing-a-system-wide-python)
-- [Build failed - bad interpreter: Permission denied](#build-failed---bad-interpreter--permission-denied)
+- [Build failed - bad interpreter: Permission denied](#build-failed-bad-interpreter-permission-denied)
 - [Build failed](#build-failed)
-- [Build failed: "ERROR: The Python zlib extension was not compiled. Missing the zlib?"](#build-failed---error--the-python-zlib-extension-was-not-compiled-missing-the-zlib--)
-- [ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?](#error--the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib-)
-- [python-build: definition not found](#python-build--definition-not-found)
-- [macOS: "ld: symbol(s) not found for architecture x86_64" (#1245)](#macos---ld--symbol-s--not-found-for-architecture-x86-64----1245-)
+- [Build failed: "ERROR: The Python zlib extension was not compiled. Missing the zlib?"](#build-failed-error-the-python-zlib-extension-was-not-compiled-missing-the-zlib-)
+- [ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?](#error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib-)
+- [python-build: definition not found](#python-build-definition-not-found)
+- [macOS: "ld: symbol(s) not found for architecture x86_64" (#1245)](#macos-ld-symbol-s-not-found-for-architecture-x86-64-1245-)
 - [Python cannot find a dependent dynamic library even though it's installed](#python-cannot-find-a-dependent-dynamic-library-even-though-it-s-installed)
-- ["python-build: definition not found" or another new feature missing even though you have a new enough Pyenv](#-python-build--definition-not-found--or-another-new-feature-missing-even-though-you-have-a-new-enough-pyenv)
-- ["configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS](#-configure--error--internal-configure-error-for-the-platform-triplet--please-file-a-bug-report--in-macos)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+- ["python-build: definition not found" or another new feature missing even though you have a new enough Pyenv](#python-build-definition-not-found-or-another-new-feature-missing-even-though-you-have-a-new-enough-pyenv)
+- ["configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS](#configure-error-internal-configure-error-for-the-platform-triplet-please-file-a-bug-report-in-macos)
 
 ## Prerequisites
 
 Make sure to have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment before any troubleshooting.
 
 Below are some alternative packages that are not in the recommended set and should generally only be considered when there are special needs and/or problems with those in it.
-<!-- Updates to the recommended set should go on the above link rather than here! -->
+<!- Updates to the recommended set should go on the above link rather than here! ->
 
 * Ubuntu/Debian: 
 
@@ -44,13 +42,13 @@ Below are some alternative packages that are not in the recommended set and shou
         * If you need OpenSSL 1.0:
     
             ```sh
-            sudo yum install compat-openssl10-devel --allowerasing
+            sudo yum install compat-openssl10-devel -allowerasing
             ```
 
         * If you need OpenSSL 1.1:
 
             ```sh
-            sudo yum install openssl11-devel --allowerasing
+            sudo yum install openssl11-devel -allowerasing
             ```
 
 
@@ -76,7 +74,7 @@ pyenv versions
 ## Installing a 32 bit python on 64 bit Mac OS X (this will *not* work on Linux)
 
 ```sh
-CONFIGURE_OPTS="--with-arch=i386" CFLAGS="-arch i386" LDFLAGS="-arch i386" python-build options
+CONFIGURE_OPTS="-with-arch=i386" CFLAGS="-arch i386" LDFLAGS="-arch i386" python-build options
 ```
 
 ## Installing a system-wide Python
@@ -128,12 +126,12 @@ BUILD FAILED
 * On Mac OS X 10.9, 10.10, 10.11 and 10.13 you may need to set the CFLAGS environment variable when installing a new version in order for configure to find the zlib headers (XCode command line tools must be installed first):
 
 ```sh
-CPPFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.7
+CPPFLAGS="-I$(xcrun -show-sdk-path)/usr/include" pyenv install -v 2.7.7
 ```
 
 * If you installed zlib with Homebrew, you can set the CPPFLAGS environment variable:
 ```sh
-CPPFLAGS="-I$(brew --prefix zlib)/include" pyenv install -v 3.7.0
+CPPFLAGS="-I$(brew -prefix zlib)/include" pyenv install -v 3.7.0
 ```
 
 * Alternatively, try reinstalling XCode command line tools for your OS
@@ -141,13 +139,13 @@ CPPFLAGS="-I$(brew --prefix zlib)/include" pyenv install -v 3.7.0
 If you experience both issues with openssl and zlib, you can specify both search paths as a compiler flag:
 
 ```sh
-CPPFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib"
+CPPFLAGS="-I$(brew -prefix openssl)/include -I$(xcrun -show-sdk-path)/usr/include" LDFLAGS="-L$(brew -prefix openssl)/lib"
 ```
 
 If you experience issues with readline, you can also specify this as a compiler flag:
 
 ```sh
-CPPFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib"
+CPPFLAGS="-I$(brew -prefix openssl)/include -I$(brew -prefix readline)/include -I$(xcrun -show-sdk-path)/usr/include" LDFLAGS="-L$(brew -prefix openssl)/lib -L$(brew -prefix readline)/lib"
 ```
 
 If you are using macOS 10.14.6 with XCode 10.3, add the following:
@@ -181,14 +179,14 @@ pyenv install -v <python version>
 or, alternatively, [for Python 3.7+](https://bugs.python.org/issue32598), instead of `CPPFLAGS` and `LDFLAGS`:
 
 ```sh
-CONFIGURE_OPTS="--with-openssl=<openssl install prefix>"
+CONFIGURE_OPTS="-with-openssl=<openssl install prefix>"
 ```
 
 or
 
 ```sh
 LDFLAGS="-Wl,-rpath,<openssl install prefix>/lib" \
-CONFIGURE_OPTS="--with-openssl=<openssl install prefix>" \
+CONFIGURE_OPTS="-with-openssl=<openssl install prefix>" \
 pyenv install -v <python version>
 ```
 
@@ -307,7 +305,7 @@ Beside build time, this can also happen for an already installed version if:
 
 * You've updated a dependent library on your system to a version with a different library filename (generally, to a new major version) since the time you had compiled Python
 
-    * The easiest way is to rebuild all affected Python installations against the new version of the library with `pyenv install <version> --force`
+    * The easiest way is to rebuild all affected Python installations against the new version of the library with `pyenv install <version> -force`
 
 ## "python-build: definition not found" or another new feature missing even though you have a new enough Pyenv
 
