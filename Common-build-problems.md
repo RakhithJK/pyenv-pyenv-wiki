@@ -1,4 +1,20 @@
-# Prerequisites
+- [Prerequisites](#prerequisites)
+- [Removing a python version manually](#removing-a-python-version-manually)
+- [Installing a 32 bit python on 64 bit Mac OS X (this will *not* work on Linux)](#installing-a-32-bit-python-on-64-bit-mac-os-x--this-will--not--work-on-linux-)
+- [Installing a system-wide Python](#installing-a-system-wide-python)
+- [Build failed - bad interpreter: Permission denied](#build-failed---bad-interpreter--permission-denied)
+- [Build failed](#build-failed)
+- [Build failed: "ERROR: The Python zlib extension was not compiled. Missing the zlib?"](#build-failed---error--the-python-zlib-extension-was-not-compiled-missing-the-zlib--)
+- [ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?](#error--the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib-)
+- [python-build: definition not found](#python-build--definition-not-found)
+- [macOS: "ld: symbol(s) not found for architecture x86_64" (#1245)](#macos---ld--symbol-s--not-found-for-architecture-x86-64----1245-)
+- [Python cannot find a dependent dynamic library even though it's installed](#python-cannot-find-a-dependent-dynamic-library-even-though-it-s-installed)
+- ["python-build: definition not found" or another new feature missing even though you have a new enough Pyenv](#-python-build--definition-not-found--or-another-new-feature-missing-even-though-you-have-a-new-enough-pyenv)
+- ["configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS](#-configure--error--internal-configure-error-for-the-platform-triplet--please-file-a-bug-report--in-macos)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+## Prerequisites
 
 Make sure to have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment before any troubleshooting.
 
@@ -292,3 +308,33 @@ Beside build time, this can also happen for an already installed version if:
 * You've updated a dependent library on your system to a version with a different library filename (generally, to a new major version) since the time you had compiled Python
 
     * The easiest way is to rebuild all affected Python installations against the new version of the library with `pyenv install <version> --force`
+
+## "python-build: definition not found" or another new feature missing even though you have a new enough Pyenv
+
+If your Pyenv is installed with Homebrew, check if you have a second, old Pyenv installed and earlier on `PATH`:
+
+```
+zsh % whence -a pyenv
+pyenv
+/Users/admin/.pyenv/bin/pyenv     <-- an extraneous Pyenv in /Users/admin/.pyenv
+/usr/local/bin/pyenv
+
+bash $ which -a pyenv
+/Users/admin/.pyenv/bin/pyenv
+/usr/local/bin/pyenv
+```
+
+If yes, [remove it](https://github.com/pyenv/pyenv#uninstalling-pyenv).
+
+## "configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS
+
+If you have MacOS with XCode 13.3+ and are getting the following error:
+
+```
+checking for the platform triplet based on compiler characteristics... darwin
+configure: error: internal configure error for the platform triplet, please file a bug report
+```
+
+This means that *the Python version you're installing doesn't support your XCode version.*
+
+XCode 13.3+ is supported by CPython versions specified as such in ["Python versions with extended support" README section](https://github.com/pyenv/pyenv#python-versions-with-extended-support) and any later versions.
