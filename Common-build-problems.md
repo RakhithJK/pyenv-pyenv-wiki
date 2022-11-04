@@ -108,7 +108,7 @@ Installing yaml-0.1.4...
 BUILD FAILED
 ```
 
-Please, be sure to have "make" installed (```$ sudo apt-get install make```). On Ubuntu Server, by default, it doesn't.
+Please, make sure that "make" is installed (```$ sudo apt-get install make```). In Ubuntu Server, by default, it isn't.
 
 ## Build failed: "ERROR: The Python zlib extension was not compiled. Missing the zlib?"
 
@@ -333,7 +333,7 @@ configure: error: internal configure error for the platform triplet, please file
 
 This means that *the Python version you're installing doesn't support your MacOS and/or XCode version.* In particular:
 
-* XCode 13.3+ is officially supported by CPython since 3.8.13 and 3.9.8. We have downstream patches to support it in some older versions, too, see ["Python versions with extended support" in the README](https://github.com/pyenv/pyenv#python-versions-with-extended-support).
+* XCode 13.3+ is officially supported by CPython since 3.8.13 and 3.9.8. We use downstream patches to support it in some older versions, too, see ["Python versions with extended support" in the README](https://github.com/pyenv/pyenv#python-versions-with-extended-support).
 * The ARM64 architecture is supported since 3.8.10 and 3.9.1
 
 ## Keg-only Homebrew packages are forcibly linked / added to PATH
