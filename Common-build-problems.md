@@ -11,7 +11,7 @@
 - [Python cannot find a dependent dynamic library even though it's installed](#python-cannot-find-a-dependent-dynamic-library-even-though-it-s-installed)
 - ["python-build: definition not found" or another new feature missing even though you have a new enough Pyenv](#python-build-definition-not-found-or-another-new-feature-missing-even-though-you-have-a-new-enough-pyenv)
 - ["configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS](#configure-error-internal-configure-error-for-the-platform-triplet-please-file-a-bug-report-in-macos)
-
+- [Keg-only Homebrew packages are forcibly linked / added to PATH](#keg-only-homebrew-packages-are-forcibly-linked--added-to-path)
 ## Prerequisites
 
 Make sure to have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment before any troubleshooting.
@@ -333,6 +333,15 @@ checking for the platform triplet based on compiler characteristics... darwin
 configure: error: internal configure error for the platform triplet, please file a bug report
 ```
 
-This means that *the Python version you're installing doesn't support your XCode version.*
+This means that *the Python version you're installing doesn't support your MacOS and/or XCode version. In particular:
 
-XCode 13.3+ is supported by CPython versions specified as such in ["Python versions with extended support" README section](https://github.com/pyenv/pyenv#python-versions-with-extended-support) and any later versions.
+* XCode 13.3+ is supported by CPython versions specified as such in the ["Python versions with extended support" README section](https://github.com/pyenv/pyenv#python-versions-with-extended-support) and any later versions.
+* The ARM64 architecture is supported since 3.8.10 and 3.9.1
+
+## Keg-only Homebrew packages are forcibly linked / added to PATH
+
+Some Homebrew packages are installed as "keg-only" -- i.e. their executables are not linked to `$(brew --prefix)/bin`.
+This is typically done because then they would override stock MacOS software (the specific reason is mentioned in `brew info` output), causing breakages. The same happens if you manually add them to PATH as specified in their `brew info` output.
+
+In particular, these Homebrew packages are known to break Pyenv builds if added to `PATH`: `binutils`, `llvm`.
+`coreutils` only causes breakage if non-prefixed executables are added to `PATH`.
