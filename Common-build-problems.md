@@ -326,16 +326,14 @@ If yes, [remove it](https://github.com/pyenv/pyenv#uninstalling-pyenv).
 
 ## "configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS
 
-If you have MacOS with XCode 13.3+ and are getting the following error:
-
 ```
 checking for the platform triplet based on compiler characteristics... darwin
 configure: error: internal configure error for the platform triplet, please file a bug report
 ```
 
-This means that *the Python version you're installing doesn't support your MacOS and/or XCode version. In particular:
+This means that *the Python version you're installing doesn't support your MacOS and/or XCode version.* In particular:
 
-* XCode 13.3+ is supported by CPython versions specified as such in the ["Python versions with extended support" README section](https://github.com/pyenv/pyenv#python-versions-with-extended-support) and any later versions.
+* XCode 13.3+ is officially supported by CPython since 3.8.13 and 3.9.8. We have downstream patches to support it in some older versions, too, see ["Python versions with extended support" in the README](https://github.com/pyenv/pyenv#python-versions-with-extended-support).
 * The ARM64 architecture is supported since 3.8.10 and 3.9.1
 
 ## Keg-only Homebrew packages are forcibly linked / added to PATH
