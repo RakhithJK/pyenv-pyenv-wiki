@@ -1,3 +1,5 @@
+Make sure to have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment before any troubleshooting.
+
 - [Prerequisites](#prerequisites)
 - [Removing a python version manually](#removing-a-python-version-manually)
 - [Installing a 32 bit python on 64 bit Mac OS X (this will *not* work on Linux)](#installing-a-32-bit-python-on-64-bit-mac-os-x-this-will-not-work-on-linux)
@@ -13,8 +15,6 @@
 - ["configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS](#configure-error-internal-configure-error-for-the-platform-triplet-please-file-a-bug-report-in-macos)
 - [Keg-only Homebrew packages are forcibly linked / added to PATH](#keg-only-homebrew-packages-are-forcibly-linked--added-to-path)
 ## Prerequisites
-
-Make sure to have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment before any troubleshooting.
 
 Below are some alternative packages that are not in the recommended set and should generally only be considered when there are special needs and/or problems with those in it.
 <!- Updates to the recommended set should go on the above link rather than here! ->
