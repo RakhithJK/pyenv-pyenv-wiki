@@ -85,7 +85,7 @@ environment.
 * **Void Linux:**
 
     ```sh
-    xbps-install base-devel bzip2-devel openssl openssl-devel readline readline-devel sqlite-devel xz zlib zlib-devel
+    xbps-install base-devel libffi-devel bzip2-devel openssl openssl-devel readline readline-devel sqlite-devel xz liblzma-devel zlib zlib-devel
     ```
 
 
