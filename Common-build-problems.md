@@ -10,7 +10,7 @@ Make sure to have installed Python's binary dependencies and build tools as per 
 - [ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?](#error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib)
 - [python-build: definition not found](#python-build-definition-not-found)
 - [macOS: "ld: symbol(s) not found for architecture x86_64" (#1245)](#macos-ld-symbol-s-not-found-for-architecture-x86-64-1245)
-- [Python cannot find a dependent dynamic library even though it's installed](#python-cannot-find-a-dependent-dynamic-library-even-though-it-s-installed)
+- [Python cannot find a dependent dynamic library even though it's installed](#python-cannot-find-a-dependent-dynamic-library-even-though-its-installed)
 - ["python-build: definition not found" or another new feature missing even though you have a new enough Pyenv](#python-build-definition-not-found-or-another-new-feature-missing-even-though-you-have-a-new-enough-pyenv)
 - ["configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS](#configure-error-internal-configure-error-for-the-platform-triplet-please-file-a-bug-report-in-macos)
 - [Keg-only Homebrew packages are forcibly linked / added to PATH](#keg-only-homebrew-packages-are-forcibly-linked--added-to-path)
