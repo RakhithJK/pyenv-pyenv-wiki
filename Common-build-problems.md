@@ -284,6 +284,14 @@ If you're getting messages like this:
 libreadline.so.7: cannot open shared object file: No such file or directory
 ```
 
+or
+
+```
+ImportError: dlopen(/Users/durand/.pyenv/versions/3.10.1/lib/python3.10/site-packages/scipy/linalg/_fblas.cpython-310-darwin.so, 2): Library not loaded: /opt/homebrew/opt/gcc/lib/gcc/11/libgfortran.5.dylib
+  Referenced from: /Users/durand/.pyenv/versions/3.10.1/lib/python3.10/site-packages/scipy/linalg/_fblas.cpython-310-darwin.so
+  Reason: image not found
+```
+
 but you do have the corresponding package installed.
 
 **Check if the dynamic library's version you have installed is the same as what Python expects:**
@@ -306,6 +314,8 @@ Beside build time, this can also happen for an already installed version if:
 * You've updated a dependent library on your system to a version with a different library filename (generally, to a new major version) since the time you had compiled Python
 
     * The easiest way is to rebuild all affected Python installations against the new version of the library with `pyenv install <version> -force`
+    * If this happens for a specific 3rd-party Python package, you need to rebuild just that package.
+    * [There's a 3rd-party plugin](https://github.com/pyenv/pyenv/wiki/Plugins) that attempts to detect and do this automatically.
 
 ## "python-build: definition not found" or another new feature missing even though you have a new enough Pyenv
 
