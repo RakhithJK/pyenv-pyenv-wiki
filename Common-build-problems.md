@@ -131,7 +131,7 @@ CPPFLAGS="-I$(xcrun -show-sdk-path)/usr/include" pyenv install -v 2.7.7
 
 * If you installed zlib with Homebrew, you can set the CPPFLAGS environment variable:
 ```sh
-CPPFLAGS="-I$(brew -prefix zlib)/include" pyenv install -v 3.7.0
+CPPFLAGS="-I$(brew --prefix zlib)/include" pyenv install -v 3.7.0
 ```
 
 * Alternatively, try reinstalling XCode command line tools for your OS
@@ -139,13 +139,13 @@ CPPFLAGS="-I$(brew -prefix zlib)/include" pyenv install -v 3.7.0
 If you experience both issues with openssl and zlib, you can specify both search paths as a compiler flag:
 
 ```sh
-CPPFLAGS="-I$(brew -prefix openssl)/include -I$(xcrun -show-sdk-path)/usr/include" LDFLAGS="-L$(brew -prefix openssl)/lib"
+CPPFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun -show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib"
 ```
 
 If you experience issues with readline, you can also specify this as a compiler flag:
 
 ```sh
-CPPFLAGS="-I$(brew -prefix openssl)/include -I$(brew -prefix readline)/include -I$(xcrun -show-sdk-path)/usr/include" LDFLAGS="-L$(brew -prefix openssl)/lib -L$(brew -prefix readline)/lib"
+CPPFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix readline)/include -I$(xcrun -show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib"
 ```
 
 If you are using macOS 10.14.6 with XCode 10.3, add the following:
