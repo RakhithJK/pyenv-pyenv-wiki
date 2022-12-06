@@ -32,7 +32,7 @@ environment.
 * **CentOS/Fedora 21 and below:**
 
     ```sh
-    yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
+    yum install gcc make zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
     ```
 
 * **Fedora 22 and above:**
