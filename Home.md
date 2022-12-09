@@ -24,10 +24,12 @@ environment.
 * **Ubuntu/Debian/Mint:**
 
     ```sh
-    sudo apt update; sudo apt install make build-essential libssl-dev zlib1g-dev \
-    libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+    sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev curl llvm \
     libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
     ```
+
+    If you are going to only install CPython, you can omit `llvm`.
 
 * **CentOS/Fedora 21 and below:**
 
