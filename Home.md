@@ -211,4 +211,4 @@ Most notably, this enables PGO (profile guided optimization). While your mileage
 env PYTHON_CONFIGURE_OPTS='--enable-optimizations --with-lto' PYTHON_CFLAGS='-march=native -mtune=native' pyenv install 3.6.0
 ```
 
-You can also customize the task used for profile guided optimization by setting the `PROFILE_TASK` environment variable, for instance, `PROFILE_TASK='-m test.regrtest --pgo -j0'`
+You can also customize the task used for profile guided optimization by setting the `PROFILE_TASK` environment variable, for instance, `PROFILE_TASK='-m test.regrtest --pgo -j0'` will run much faster than the default task.
