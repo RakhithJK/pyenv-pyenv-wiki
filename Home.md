@@ -202,3 +202,13 @@ $ env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.5.0
 ```
 
 Since pyenv (precisely, python-build) will build CPython with configuring RPATH, you don't have to set `LD_LIBRARY_PATH` to specify library path on GNU/Linux.
+
+### How to build CPython for maximum performance
+
+Building CPython with `--enable-optimizations` will result in a faster interpreter at the cost of significantly longer build times.
+Most notably, this enables PGO (profile guided optimization). While your mileage may vary, it is common for performance improvement from this to be in the ballpark of 30%.
+```sh
+env PYTHON_CONFIGURE_OPTS='--enable-optimizations --with-lto' PYTHON_CFLAGS='-march=native -mtune=native' pyenv install 3.6.0
+```
+
+You can also customize the task used for profile guided optimization by setting the `PROFILE_TASK` environment variable, for instance, `PROFILE_TASK='-m test.regrtest --pgo -j0'`
