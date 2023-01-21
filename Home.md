@@ -25,11 +25,11 @@ environment.
 
     ```sh
     sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
-    libbz2-dev libreadline-dev libsqlite3-dev curl llvm \
+    libbz2-dev libreadline-dev libsqlite3-dev curl \
     libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
     ```
 
-    If you are going to only install CPython, you can omit `llvm`.
+    If you are going build PyPy from source or install other Python flavors that require CLang, also install `llvm`.
 
 * **CentOS/Fedora 21 and below:**
 
