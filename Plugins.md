@@ -10,7 +10,6 @@ accordingly somewhere in `$PYENV_HOOK_PATH`.
 
 * [virtualenv](https://github.com/pyenv/pyenv-virtualenv) - the standard way to manage virtualenv with pyenv (formerly as known as [python-virtualenv](https://github.com/pyenv/python-virtualenv))
 * [virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper) - allow you to play pyenv with virtualenvwrapper
-* [pip-rehash](https://github.com/pyenv/pyenv-pip-rehash) - Automatically run `pyenv rehash` every time you install a new package via pip
 * [pip-migrate](https://github.com/pyenv/pyenv-pip-migrate) - Migrate pip packages from a Python version to another
 * [update](https://github.com/pyenv/pyenv-update) - Update pyenv and plugins
 * [installer](https://github.com/pyenv/pyenv-installer) - This tools is used to install `pyenv` and friends
