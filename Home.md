@@ -18,7 +18,7 @@ environment.
     (`xcode-select --install`) and [Homebrew](http://brew.sh/). Then:
 
     ```sh
-    brew install openssl readline sqlite3 xz zlib tcl-tk llvm
+    brew install openssl readline sqlite3 xz zlib tcl-tk
     ```
 
 * **Ubuntu/Debian/Mint:**
