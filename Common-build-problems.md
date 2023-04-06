@@ -349,17 +349,19 @@ This means that *the Python version you're installing doesn't support your MacOS
 
 ## Keg-only Homebrew packages are forcibly linked / added to PATH
 
-Some Homebrew packages are installed as "keg-only" -- i.e. their executables are not linked to `$(brew --prefix)/bin`.
-This is typically done because then they would override stock MacOS software (the specific reason is mentioned in `brew info` output), causing breakages. The same happens if you manually add them to `PATH` as specified in their `brew info` output.
+The following Homebrew packages are known to break Pyenv builds if added to `PATH` (with some known error messages they cause in the build log).
 
-In particular, these Homebrew packages are known to break Pyenv builds if added to `PATH` (with some known error messages they cause in the build log):
+Remove them from the default `PATH`.
 
-* `binutils`
+* Homebrew `binutils` on `PATH`:
   * `configure: error: Unexpected output of 'arch' on OSX`
-* `llvm`
+* homebrew `llvm` on `PATH`:
   * `warning: pointer is missing a nullability type specifier`
   * `llvm-ar: error: libpython3.10.a: Invalid record`
-* `coreutils` only causes breakage if non-prefixed executables are added to `PATH`.
+* Homebrew `coreutils` only causes breakage if non-prefixed executables are added to `PATH`.
+
+Some Homebrew packages are installed as "keg-only" -- i.e. their executables are not linked to `$(brew --prefix)/bin`.
+This is typically done because then they would override stock MacOS software (the specific reason is mentioned in `brew info` output), causing breakages. The same happens if you manually add them to `PATH` as specified in their `brew info` output.
 
 ## On Apple Silicon, when building for ARM64, a dependency is present in x64 Homebrew but not arm64 Homebrew
 
