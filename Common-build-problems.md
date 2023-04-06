@@ -15,6 +15,7 @@ Make sure to have installed Python's binary dependencies and build tools as per 
 - ["configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS](#configure-error-internal-configure-error-for-the-platform-triplet-please-file-a-bug-report-in-macos)
 - [Keg-only Homebrew packages are forcibly linked / added to PATH](#keg-only-homebrew-packages-are-forcibly-linked--added-to-path)
 ## Prerequisites
+- [On Apple Silicon, when building for ARM64, a dependency is present in x64 Homebrew but not arm64 Homebrew](#on-apple-silicon-when-building-for-arm64-a-dependency-is-present-in-x64-homebrew-but-not-arm64-homebrew)
 
 Below are some alternative packages that are not in the recommended set and should generally only be considered when there are special needs and/or problems with those in it.
 <!- Updates to the recommended set should go on the above link rather than here! ->
@@ -360,7 +361,7 @@ In particular, these Homebrew packages are known to break Pyenv builds if added 
   * `llvm-ar: error: libpython3.10.a: Invalid record`
 * `coreutils` only causes breakage if non-prefixed executables are added to `PATH`.
 
-## On Apple Silicon, when building for ARM64, a dependency is present x64 Homebrew but not arm64 Homebrew
+## On Apple Silicon, when building for ARM64, a dependency is present in x64 Homebrew but not arm64 Homebrew
 
 Known errors:
 * `dyld[88714]: symbol not found in flat namespace '_libintl_bindtextdomain'`
