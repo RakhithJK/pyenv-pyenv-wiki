@@ -349,7 +349,12 @@ This means that *the Python version you're installing doesn't support your MacOS
 ## Keg-only Homebrew packages are forcibly linked / added to PATH
 
 Some Homebrew packages are installed as "keg-only" -- i.e. their executables are not linked to `$(brew --prefix)/bin`.
-This is typically done because then they would override stock MacOS software (the specific reason is mentioned in `brew info` output), causing breakages. The same happens if you manually add them to PATH as specified in their `brew info` output.
+This is typically done because then they would override stock MacOS software (the specific reason is mentioned in `brew info` output), causing breakages. The same happens if you manually add them to `PATH` as specified in their `brew info` output.
 
-In particular, these Homebrew packages are known to break Pyenv builds if added to `PATH`: `binutils`, `llvm`.
-`coreutils` only causes breakage if non-prefixed executables are added to `PATH`.
+In particular, these Homebrew packages are known to break Pyenv builds if added to `PATH` (with known error messages they cause in the build log):
+
+* `binutils`
+  * `configure: error: Unexpected output of 'arch' on OSX`
+* `llvm`
+  * `warning: pointer is missing a nullability type specifier`
+* `coreutils` only causes breakage if non-prefixed executables are added to `PATH`.
