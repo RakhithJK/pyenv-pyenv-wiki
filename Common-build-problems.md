@@ -355,7 +355,7 @@ Remove them from your `PATH`.
 
 * Homebrew `binutils` on `PATH`:
   * `configure: error: Unexpected output of 'arch' on OSX`
-* homebrew `llvm` on `PATH`:
+* Homebrew `llvm` on `PATH`:
   * `warning: pointer is missing a nullability type specifier`
   * `llvm-ar: error: libpython3.10.a: Invalid record`
 * Homebrew `coreutils` only causes breakage if non-prefixed executables are added to `PATH`.
