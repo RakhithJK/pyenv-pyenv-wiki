@@ -351,10 +351,23 @@ This means that *the Python version you're installing doesn't support your MacOS
 Some Homebrew packages are installed as "keg-only" -- i.e. their executables are not linked to `$(brew --prefix)/bin`.
 This is typically done because then they would override stock MacOS software (the specific reason is mentioned in `brew info` output), causing breakages. The same happens if you manually add them to `PATH` as specified in their `brew info` output.
 
-In particular, these Homebrew packages are known to break Pyenv builds if added to `PATH` (with known error messages they cause in the build log):
+In particular, these Homebrew packages are known to break Pyenv builds if added to `PATH` (with some known error messages they cause in the build log):
 
 * `binutils`
   * `configure: error: Unexpected output of 'arch' on OSX`
 * `llvm`
   * `warning: pointer is missing a nullability type specifier`
+  * `llvm-ar: error: libpython3.10.a: Invalid record`
 * `coreutils` only causes breakage if non-prefixed executables are added to `PATH`.
+
+## On Apple Silicon, when building for ARM64, a dependency is present x64 Homebrew but not arm64 Homebrew
+
+Known errors:
+* `dyld[88714]: symbol not found in flat namespace '_libintl_bindtextdomain'`
+  * Install `gettext` into arm64 Homebrew
+* `unsupported hash type blake2s`, `ld: warning: ignoring file /usr/local/Cellar/libb2/0.98.1/lib/libb2.dylib`
+  * Install `libb2` into the arm64 Homebrew or uninstall it from the x64 Homebrew
+
+Since x64's Homebrew is in `/usr/local`, it's always in the compiler's search path. We however prepend `/opt/homebrew` to the compiler's search path when compiling for arm64 (actually, when `brew` on `PATH` is pointing there).
+
+So if a library is installed and linked in the x64 Homebrew but not in Arm64 Homebrew, the compiler still finds it, even if it's compiling for arm64. However, linking with it fails as it's for the wrong architecture.
