@@ -14,8 +14,8 @@ Make sure to have installed Python's binary dependencies and build tools as per 
 - ["python-build: definition not found" or another new feature missing even though you have a new enough Pyenv](#python-build-definition-not-found-or-another-new-feature-missing-even-though-you-have-a-new-enough-pyenv)
 - ["configure: error: internal configure error for the platform triplet, please file a bug report" in MacOS](#configure-error-internal-configure-error-for-the-platform-triplet-please-file-a-bug-report-in-macos)
 - [Keg-only Homebrew packages are forcibly linked / added to PATH](#keg-only-homebrew-packages-are-forcibly-linked--added-to-path)
-## Prerequisites
 - [On Apple Silicon, when building for ARM64, a dependency is present in x64 Homebrew but not arm64 Homebrew](#on-apple-silicon-when-building-for-arm64-a-dependency-is-present-in-x64-homebrew-but-not-arm64-homebrew)
+## Prerequisites
 
 Below are some alternative packages that are not in the recommended set and should generally only be considered when there are special needs and/or problems with those in it.
 <!- Updates to the recommended set should go on the above link rather than here! ->
