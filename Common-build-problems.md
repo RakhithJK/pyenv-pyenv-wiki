@@ -366,7 +366,7 @@ This is typically done because then they would override stock MacOS software (th
 ## On Apple Silicon, when building for ARM64, a dependency is present in x64 Homebrew but not arm64 Homebrew
 
 Known errors:
-* `dyld[88714]: symbol not found in flat namespace '_libintl_bindtextdomain'`, `ld: symbol(s) not found for architecture arm64`
+* `dyld[88714]: symbol not found in flat namespace '_libintl_bindtextdomain'`, `__locale_textdomain in _localemodule.o ld: symbol(s) not found for architecture arm64`
   * Install `gettext` into arm64 Homebrew
 * `unsupported hash type blake2s`, `ld: warning: ignoring file /usr/local/Cellar/libb2/0.98.1/lib/libb2.dylib`
   * Install `libb2` into the arm64 Homebrew or uninstall it from the x64 Homebrew
