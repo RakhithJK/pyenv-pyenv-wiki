@@ -204,8 +204,8 @@ E.g. (invocations that worked for various people):
 * CentOS 7 with OpenSSL 1.1.1:
 
     ```sh
-    CPPFLAGS=-I/usr/include/openssl11 \
-    LDFLAGS=-L/usr/lib64/openssl11 \
+    CPPFLAGS="$(pkg-config --cflags openssl11)" \
+    LDFLAGS=-"$(pkg-config --libs openssl11)" \
     pyenv install -v 3.10.6
     ```
 
