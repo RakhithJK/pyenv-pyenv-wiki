@@ -37,6 +37,11 @@ environment.
     yum install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
     ```
 
+* **Amazon Linux 2 **
+
+    ```sh
+    yum install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl11-devel tk-devel libffi-devel xz-devel
+    ```
 * **Fedora 22 and above:**
 
     ```sh
