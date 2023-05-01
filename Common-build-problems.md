@@ -205,7 +205,7 @@ E.g. (invocations that worked for various people):
 
     ```sh
     CPPFLAGS="$(pkg-config --cflags openssl11)" \
-    LDFLAGS=-"$(pkg-config --libs openssl11)" \
+    LDFLAGS="$(pkg-config --libs openssl11)" \
     pyenv install -v 3.10.6
     ```
 
