@@ -52,6 +52,12 @@ Below are some alternative packages that are not in the recommended set and shou
             sudo yum install openssl11-devel --allowerasing
             ```
 
+    If your `yum` doesn't support the `--allowerasing` flag, use `yum swap` instead, e.g.:
+
+    ```sh
+    sudo yum swap openssl-devel openssl11-devel
+    ```
+
 
 * Arch and derivatives
 
