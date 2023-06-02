@@ -355,9 +355,10 @@ This means that *the Python version you're installing doesn't support your MacOS
 
 ## Keg-only Homebrew packages are forcibly linked / added to PATH
 
-The following keg-only Homebrew packages are known to break Pyenv builds if added to `PATH` (with some known error messages they cause in the build log).
+Some keg-only (explanation is below) Homebrew packages are known to break Pyenv builds if forcibly linked/added to `PATH`.
+Unlink/Remove them from your `PATH`.
 
-Remove them from your `PATH`.
+Known error messages they cause:
 
 * Homebrew `binutils` on `PATH`:
   * `configure: error: Unexpected output of 'arch' on OSX`
