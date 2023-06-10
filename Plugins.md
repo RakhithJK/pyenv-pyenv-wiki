@@ -8,13 +8,16 @@ accordingly somewhere in `$PYENV_HOOK_PATH`.
 
 ## Official plugins
 
-* [virtualenv](https://github.com/pyenv/pyenv-virtualenv) - the standard way to manage virtualenv with pyenv (formerly as known as [python-virtualenv](https://github.com/pyenv/python-virtualenv))
+* [virtualenv] - the standard way to manage virtualenv with pyenv (formerly as known as [python-virtualenv](https://github.com/pyenv/python-virtualenv))
 * [virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper) - allow you to play pyenv with virtualenvwrapper
-* [pip-migrate](https://github.com/pyenv/pyenv-pip-migrate) - Migrate pip packages from a Python version to another
+* [pip-migrate] - Migrate pip packages from a Python version to another
 * [update](https://github.com/pyenv/pyenv-update) - Update pyenv and plugins
 * [installer](https://github.com/pyenv/pyenv-installer) - This tools is used to install `pyenv` and friends
 * [doctor](https://github.com/pyenv/pyenv-doctor) - Verify pyenv installation
 * [ccache](https://github.com/pyenv/pyenv-ccache) - Make Python build faster, with using the leverage of `ccache`.
+
+[virtualenv]: https://github.com/pyenv/pyenv-virtualenv
+[pip-migrate]: https://github.com/pyenv/pyenv-pip-migrate
 
 ## Community plugins
 Thanks to the hard work of the community, there are numerous other pyenv plugins to extend functionality for other use cases.
@@ -29,3 +32,4 @@ These are not maintained or tested by the `pyenv` team, so use at your own risk!
 * [choice](https://github.com/fizista/pyenv-choice) - Allows you to choose which version of Python you will use for a given program name, if there are multiple versions of this program.
 * [fix-version](https://github.com/sprout42/pyenv-fix-version) - Provides a `pyenv fix-version` command to try and fix up any missing library dependencies there may be for an installed python version.
 * [lint](https://github.com/real-yfprojects/pyenv-link) - Allows you to use arbitrary venvs with pyenv by linking them into your pyenv root.
+* [virtualenv-migrate](https://github.com/ashwinvis/pyenv-virtualenv-migrate) - Combines the functionalities of pyenv's [virtualenv] and [pip-migrate] plugins to migrate virtualenvs en masse.
