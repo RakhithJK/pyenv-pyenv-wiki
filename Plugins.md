@@ -31,5 +31,5 @@ These are not maintained or tested by the `pyenv` team, so use at your own risk!
 * [pip-update](https://github.com/massongit/pyenv-pip-update), [pip-upgrade](https://github.com/zyrikby/pyenv-pip-upgrade) - Update all libraries managed by pip or conda in multiple environments.
 * [choice](https://github.com/fizista/pyenv-choice) - Allows you to choose which version of Python you will use for a given program name, if there are multiple versions of this program.
 * [fix-version](https://github.com/sprout42/pyenv-fix-version) - Provides a `pyenv fix-version` command to try and fix up any missing library dependencies there may be for an installed python version.
-* [lint](https://github.com/real-yfprojects/pyenv-link) - Allows you to use arbitrary venvs with pyenv by linking them into your pyenv root.
+* [link](https://github.com/real-yfprojects/pyenv-link) - Allows you to use arbitrary venvs with pyenv by linking them into your pyenv root.
 * [virtualenv-migrate](https://github.com/ashwinvis/pyenv-virtualenv-migrate) - Combines the functionalities of pyenv's [virtualenv] and [pip-migrate] plugins to migrate virtualenvs en masse.
