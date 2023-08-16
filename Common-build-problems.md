@@ -1,4 +1,4 @@
-Make sure to have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment before any troubleshooting.
+First of all, make sure you have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment , before any further troubleshooting.
 
 - [Prerequisites](#prerequisites)
 - [Removing a python version manually](#removing-a-python-version-manually)
