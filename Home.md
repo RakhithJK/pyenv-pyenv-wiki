@@ -20,6 +20,18 @@ environment.
     ```sh
     brew install openssl readline sqlite3 xz zlib tcl-tk
     ```
+    
+    For older operating systems `Homebrew` might not be available so install `pyenv` with: 
+    
+    ```sh
+    curl https://pyenv.run | bash
+    ```
+    
+    For dependencies use [MacPorts](https://www.macports.org/install.php):
+
+    ```sh
+    sudo port install pkgconfig openssl zlib xz gdbm tcl tk +quartz sqlite3 sqlite3-tcl
+    ```
 
 * **Ubuntu/Debian/Mint:**
 
