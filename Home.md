@@ -29,7 +29,7 @@ environment.
     
     `xcode-select --install` might not be available on older macOS's so use [this script](https://gist.github.com/rtrouton/f92f263414aaeb946e54) instead or [this page](https://xcodereleases.com/) as well as directly from Apple downloads:
 
-https://xcodereleases.com/
+https://developer.apple.com/download/more/
 
 And search for:
 ```
