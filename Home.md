@@ -37,11 +37,11 @@ command line tools <version number>
 ```
 like `command line tools 10.9`
  
-    For dependencies use [MacPorts](https://www.macports.org/install.php):
+For dependencies use [MacPorts](https://www.macports.org/install.php):
 
-    ```sh
+    
     sudo port install pkgconfig openssl zlib xz gdbm tcl tk +quartz sqlite3 sqlite3-tcl
-    ```
+    
 
 * **Ubuntu/Debian/Mint:**
 
