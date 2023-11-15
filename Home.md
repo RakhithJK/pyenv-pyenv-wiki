@@ -27,17 +27,17 @@ environment.
     curl https://pyenv.run | bash
     ```
     
-    `xcode-select --install` might not be available on older macOS's so use [this script](https://gist.github.com/rtrouton/f92f263414aaeb946e54) instead or [this page](https://xcodereleases.com/) as well as directly from Apple downloads:
+    `xcode-select --install` might not be available on older macOS's so use [this script (https://gist.github.com/rtrouton/f92f263414aaeb946e54) instead or [this page](https://xcodereleases.com/) as well as directly from Apple downloads:
 
-https://developer.apple.com/download/more/
+    https://developer.apple.com/download/more/
 
-And search for:
-```
-command line tools <version number>
-```
-like `command line tools 10.9`
+    And search for:
+    ```
+    command line tools <version number>
+    ```
+    like `command line tools 10.9`
  
-For dependencies use [MacPorts](https://www.macports.org/install.php):
+    For dependencies use [MacPorts](https://www.macports.org/install.php):
 
     
     sudo port install pkgconfig openssl zlib xz gdbm tcl tk +quartz sqlite3 sqlite3-tcl
