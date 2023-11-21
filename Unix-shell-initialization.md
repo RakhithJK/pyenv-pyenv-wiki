@@ -80,9 +80,11 @@ In order of activation:
 
 ### [fish][]
 
-1. `<install-prefix>/config.fish`
-2. `/etc/fish/config.fish`
-3. `~/.config/fish/config.fish`
+1. `~/.config/fish/conf.d/*.fish`
+2. `/etc/fish/conf.d/*.fish`
+3. `<prefix>/fish/vendor_conf.d/*.fish` (where `prefix` is each entry of `$XDG_DATA_DIRS`, _or_ `/usr/share` and `/usr/local/share`)
+4. `/etc/fish/config.fish`
+5. `~/.config/fish/config.fish`
 
 ### Practical guide to which files get sourced when
 
@@ -135,5 +137,5 @@ See also:
 
   [Capistrano]: https://github.com/capistrano/capistrano/wiki
   [dash]: http://gondor.apana.org.au/~herbert/dash/
-  [fish]: http://ridiculousfish.com/shell/user_doc/html/index.html#initialization
+  [fish]: https://fishshell.com/docs/current/language.html#configuration
   [plist]: http://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html#//apple_ref/doc/uid/20002093-113982
