@@ -1,5 +1,9 @@
 First of all, make sure you have installed Python's binary dependencies and build tools as per https://github.com/pyenv/pyenv/wiki#suggested-build-environment , before any further troubleshooting.
 
+Open the build log and look for any error messages in it (they are usually marked with the word "error"). If there are many error messages, the earliest one typically points to the root cause.
+
+If your error message is not listed in the below table of contents (TOC), try searching this page for the message's parts (best for parts that would likely remain the same between distributions and library versions). If multiple different error messages have the same cause, we list them in the corresponding section's text rather than in the TOC.
+
 - [Prerequisites](#prerequisites)
 - [Removing a python version manually](#removing-a-python-version-manually)
 - [Installing a 32 bit python on 64 bit Mac OS X (this will *not* work on Linux)](#installing-a-32-bit-python-on-64-bit-mac-os-x-this-will-not-work-on-linux)
