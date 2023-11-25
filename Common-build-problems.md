@@ -375,8 +375,10 @@ This is typically done because then they would override stock MacOS software (th
 
 Known errors and their resolutions:
 * `dyld[88714]: symbol not found in flat namespace '_libintl_bindtextdomain'`, `__locale_textdomain in _localemodule.o ld: symbol(s) not found for architecture arm64`
-  * Install `gettext` into arm64 Homebrew
-* `unsupported hash type blake2s`, `ld: warning: ignoring file /usr/local/Cellar/libb2/0.98.1/lib/libb2.dylib`
+  * Install `gettext` into the arm64 Homebrew
+* `unsupported hash type blake2s`
+* `ld: warning: ignoring file /usr/local/Cellar/<...>/libb2.dylib: found architecture 'x86_64', required architecture 'arm64'`
+* `[ERROR] _blake2 failed to import: dlopen(<...>/_blake2.cpython-312-darwin.so, 0x0002): symbol not found in flat namespace '_blake2b_final'`
   * Install `libb2` into the arm64 Homebrew or uninstall it from the x64 Homebrew
 
 Since x64's Homebrew is in `/usr/local`, it's always in the compiler's search path. We however prepend `/opt/homebrew` to the compiler's search path when compiling for arm64 (actually, when `brew` on `PATH` is pointing there).
