@@ -181,6 +181,7 @@ sudo apt install zlib1g zlib1g-dev libssl-dev libbz2-dev libsqlite3-dev
 ### 1. **OpenSSL is installed to an uncommon location.**
 
 Pass the location of its headers and libraries explicitly:
+(the openssl folder can be found by running `openssl version -d`)
 
 ```sh
 CPPFLAGS="-I<openssl install prefix>/include" \
