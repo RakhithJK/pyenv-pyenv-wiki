@@ -11,6 +11,7 @@
 - [Build failed - bad interpreter: Permission denied](#build-failed-bad-interpreter-permission-denied)
 - [Build failed](#build-failed)
 - [Build failed: "ERROR: The Python zlib extension was not compiled. Missing the zlib?"](#build-failed-error-the-python-zlib-extension-was-not-compiled-missing-the-zlib)
+- [Build failed: Resource temporarily unavailable](#build-failed-resource-temporarily-unavailable)
 - [ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?](#error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib)
 - [python-build: definition not found](#python-build-definition-not-found)
 - [macOS: "ld: symbol(s) not found for architecture x86_64" (#1245)](#macos-ld-symbol-s-not-found-for-architecture-x86-64-1245)
@@ -169,6 +170,12 @@ MACOSX_DEPLOYMENT_TARGET=10.14
 If you are using Ubuntu/Debian, you need the following packages:
 ```sh
 sudo apt install zlib1g zlib1g-dev libssl-dev libbz2-dev libsqlite3-dev
+```
+
+## Build failed: Resource temporarily unavailable
+If you see the string "resource temporarily unavailable" (often after "fork: "), then you may be on a shared host or other machine with low resource limits. Try running only a single job at a time to reduce resource usage:
+```sh
+MAKE_OPTS='-j 1' pyenv install 3.12.1
 ```
 
 ## ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
