@@ -259,3 +259,11 @@ qpm-cli --license-activate qualcomm_ai_engine_direct
 # This downloads the package
 qpm-cli --extract qualcomm_ai_engine_direct
 ```
+
+If you hit `No usable version of libssl was found`
+
+```
+sudo apt-get install libssl-dev
+wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+```
