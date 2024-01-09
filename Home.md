@@ -267,3 +267,13 @@ sudo apt-get install libssl-dev
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 ```
+
+In shell (e.g. `~/.bashrc`), add
+
+```
+# replace AISW_SDK_ROOT with the version printed from the installation step
+export AISW_SDK_ROOT='/opt/qcom/aistack/qnn/2.18.0.240101'
+export PATH="$AISW_SDK_ROOT/bin/x86_64-linux-clang:$PATH"
+export LD_LIBRARY_PATH="$AISW_SDK_ROOT/lib/x86_64-linux-clang:${LD_LIBRARY_PATH}"
+export PYTHONPATH="$AISW_SDK_ROOT/lib/python:$PYTHONPATH"
+```
