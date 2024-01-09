@@ -239,3 +239,23 @@ env PYTHON_CONFIGURE_OPTS='--enable-optimizations --with-lto' PYTHON_CFLAGS='-ma
 ```
 
 You can also customize the task used for profile guided optimization by setting the `PROFILE_TASK` environment variable, for instance, `PROFILE_TASK='-m test.regrtest --pgo -j0'` will run much faster than the default task.
+
+### Get QPM and AISW
+
+This is needed to run qnn-onnx-converter, qnn-pytorch-converter.
+
+- On local macbook, download QPM [here](https://qpm.qualcomm.com/#/main/tools/details/QPM3). Log in with Qualpass username and password -> select "Linux" -> search QPM.
+
+-  `scp` the file to dev machine. For example, `scp QualcommPackageManager.2.0.39.2.Linux-x86.deb weidai@$DEV:/local/mnt/workspace/downloads`
+
+- On Dev Desktop or DevCompute, `sudo dpkg -i <QualcommPackageManager>.deb`
+
+- Install via QPM
+
+```
+# log in with Qualpass
+qpm-cli --login
+qpm-cli --license-activate qualcomm_ai_engine_direct
+# This downloads the package
+qpm-cli --extract qualcomm_ai_engine_direct
+```
