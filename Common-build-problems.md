@@ -72,6 +72,14 @@ Below are some alternative packages that are not in the recommended set and shou
     yay -S ncurses5-compat-libs 
     ```
 
+* macOS 14+ - Apple Silicone
+
+    Installing versions of Python `>=3.12.1` on some machines may require `ncurses`, which seem to be missing. Install it with:
+
+    ```sh
+    homebrew install ncurses 
+    ```
+
 ## Removing a python version manually
 
 ```sh
