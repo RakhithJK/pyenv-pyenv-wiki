@@ -77,7 +77,7 @@ Below are some alternative packages that are not in the recommended set and shou
     Installing versions of Python `>=3.12.1` on some machines may require `ncurses`, which seem to be missing. Install it with:
 
     ```sh
-    homebrew install ncurses 
+    brew install ncurses 
     ```
 
 ## Removing a python version manually
