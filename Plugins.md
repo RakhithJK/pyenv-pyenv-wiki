@@ -14,7 +14,7 @@ accordingly somewhere in `$PYENV_HOOK_PATH`.
 * [update](https://github.com/pyenv/pyenv-update) - Update pyenv and plugins
 * [installer](https://github.com/pyenv/pyenv-installer) - This tools is used to install `pyenv` and friends
 * [doctor](https://github.com/pyenv/pyenv-doctor) - Verify pyenv installation
-* [ccache](https://github.com/pyenv/pyenv-ccache) - Make Python build faster, by leverage `ccache`.
+* [ccache](https://github.com/pyenv/pyenv-ccache) - Make Python build faster, by leveraging `ccache`.
 
 [virtualenv]: https://github.com/pyenv/pyenv-virtualenv
 [pip-migrate]: https://github.com/pyenv/pyenv-pip-migrate
