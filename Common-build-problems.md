@@ -244,7 +244,7 @@ E.g. (invocations that worked for various people):
     pyenv install -v 3.4.3
     ```
 
-* If you installed openssl with macports:
+* If you installed openssl with macports or homebrew:
 
     ```sh
     CPPFLAGS="-I/opt/local/include/" \
