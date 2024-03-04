@@ -39,9 +39,9 @@ environment.
  
     For dependencies use [MacPorts](https://www.macports.org/install.php):
 
-    
+    ```sh
     sudo port install pkgconfig openssl zlib xz gdbm tcl tk +quartz sqlite3 sqlite3-tcl
-    
+    ```
 
 * **Ubuntu/Debian/Mint:**
 
