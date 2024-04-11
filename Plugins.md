@@ -26,7 +26,6 @@ These are not maintained or tested by the `pyenv` team, so use at your own risk!
 
 * [implicit](https://github.com/concordusapps/pyenv-implict) - Allow pyenv to guess the python version from the program name.
 * [alias](https://github.com/s1341/pyenv-alias) - Allows installation of python instances using user-supplied names. This allows multiple instances of the same python version to be installed.
-* [alias-latest-patch-version](https://github.com/upside-services/pyenv-alias-latest-patch-version) - allows you to specify Major.minor version that maps to the latest patch release.
 * [default-packages](https://github.com/jawshooah/pyenv-default-packages) - Installs a set of default packages any time you install a new version of python or create a new virtualenv
 * [pip-update](https://github.com/massongit/pyenv-pip-update), [pip-upgrade](https://github.com/zyrikby/pyenv-pip-upgrade) - Update all libraries managed by pip or conda in multiple environments.
 * [choice](https://github.com/fizista/pyenv-choice) - Allows you to choose which version of Python you will use for a given program name, if there are multiple versions of this program.
