@@ -72,7 +72,7 @@ Below are some alternative packages that are not in the recommended set and shou
     yay -S ncurses5-compat-libs 
     ```
 
-* macOS 14+ - Apple Silicone
+* macOS 14+ - Apple Silicon
 
     Installing versions of Python `>=3.12.1` on some machines may require `ncurses`, which seem to be missing. Install it with:
 
