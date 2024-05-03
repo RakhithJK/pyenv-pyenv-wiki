@@ -191,6 +191,7 @@ MAKE_OPTS='-j 1' pyenv install 3.12.1
 ### 0. First, check
 * if you actually have OpenSSL and its headers installed (and for the right architecture and ecosystem if there are more than one at your machine)
   * Ubuntu: `sudo apt install libssl-dev`
+  * Fedora: `sudo dnf install openssl-devel`
 * if the problem is resolved by upgrading Pyenv to the latest release and to the head version
 
 ### 1. **OpenSSL is installed to an uncommon location.**
