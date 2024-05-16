@@ -302,8 +302,9 @@ $ cd ~/.pyenv/plugins/python-build && git pull
 From ([#1245](https://github.com/pyenv/pyenv/issues/1245)).
 
 This may be caused by an incompatible version of `ar` bundled with brew-distributed binutils.
+This is the reason why `binutils` is keg-only.
 
-To fix, either `brew remove binutils` or execute the install command with `AR=/usr/bin/ar`.
+To fix, uninstall binutils `brew remove binutils`, or remove them from PATH, or execute the install command with `AR=/usr/bin/ar`.
 
 ## Python cannot find a dependent dynamic library even though it's installed
 
